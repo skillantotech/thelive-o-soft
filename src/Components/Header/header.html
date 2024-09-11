@@ -1,0 +1,41 @@
+<header id="header" class="bg-gradient-to-r from-green-900 to-black text-white py-4 shadow-md fixed top-0 left-0 w-full z-50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4">
+        <a href="#" class="text-lg font-bold text-white hover:text-gray-300 transition duration-300">Organic Farm</a>
+        <!-- Menu Button (Mobile) -->
+        <div class="sm:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Full Menu (Desktop) -->
+        <nav id="nav-menu" class="hidden sm:flex sm:items-center sm:space-x-8">
+            <a href="index.html" class="py-2 px-2 text-sm text-xs text-white hover:bg-green-700 hover:rounded-lg transition duration-300">HOME</a>
+            <a href="Services.html" class="py-2 px-2 text-sm text-white hover:bg-green-700 hover:rounded-lg transition duration-300">SERVICES</a>
+            <a href="About Us.html" class="py-2 px-2 text-sm text-white hover:bg-green-700 hover:rounded-lg transition duration-300">ABOUT US</a>
+            <a href="FaQ.html" class="py-2 px-2 text-sm text-white hover:bg-green-700 hover:rounded-lg transition duration-300">FaQ</a>
+            <a href="#" class="py-2 px-2 text-sm text-white hover:bg-green-700 hover:rounded-lg transition duration-300">CONTACT US</a>
+            <button class="py-2 px-4 bg-white text-sm text-green-600 rounded-lg hover:bg-gray-300 transition duration-300">Login</button>
+        </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden sm:hidden bg-gradient-to-r from-green-900 to-black  shadow-md mt-2">
+        <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="block py-2 px-2 text-sm text-white hover:bg-green-700 rounded-lg transition duration-300">HOME</a>
+            <a href="Services.html" class="block py-2 px-2 text-sm text-white hover:bg-green-700 rounded-lg transition duration-300">SERVICES</a>
+            <a href="About Us.html" class="block py-2 px-2 text-sm text-white hover:bg-green-700 rounded-lg transition duration-300">ABOUT US</a>
+            <a href="FaQ.html" class="block py-2 px-2 text-sm text-white hover:bg-green-700 rounded-lg transition duration-300">FaQ</a>
+            <a href="#" class="block py-2 px-2 text-sm text-white hover:bg-green-700 rounded-lg transition duration-300">CONTACT US</a>
+            <button class="block py-2 px-4 bg-white text-sm text-green-600 rounded-lg hover:bg-gray-300 transition duration-300">Login</button>
+        </nav>
+    </div>
+</header>
+
+<script>
+    
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>

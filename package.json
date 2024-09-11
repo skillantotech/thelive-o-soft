@@ -1,0 +1,11 @@
+{
+  "name": "theolivesoft",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./input.css -o ./output.css --watch",
+    "build": "npx tailwindcss -i ./input.css -o ./output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
