@@ -4,110 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Accordion with Tailwind CSS</title>
-  <link href="../../output.css" rel="stylesheet" />
-  
-   
+    <link href="../../output.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class=" text-gray-800 font-sans">
-    <script>
-
-    
-            // JavaScript for tab functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            // Function to hide all contents and remove active state
-            function hideAllContents() {
-                tabContents.forEach(content => content.classList.add('hidden'));
-                tabButtons.forEach(btn => btn.classList.remove('text-green-600','font-semibold'));
-            }
-
-            // Attach event listeners to each tab button
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Hide all tab contents and remove active class from buttons
-                    hideAllContents();
-                     button.classList.add('text-green-600','font-semibold');
-                    // Activate the clicked tab and show its content
-                    //button.classList.add('hover:bg-green-800','hover:text-white');
-                    document.getElementById(button.getAttribute('data-tab')).classList.remove('hidden');
-                });
-            });
-
-            // Trigger click on the first tab button to show its content by default
-            tabButtons[0].click();
-        });
-
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // Select all elements with class 'accordion-button'
-        const collapseButtons = document.querySelectorAll(".accordion-button");
-
-        // Add event listeners to all collapse buttons
-        collapseButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            // Close all other collapsible contents
-            collapseButtons.forEach((btn) => {
-              if (btn !== this) {
-                btn.nextElementSibling.classList.add("hidden"); // Hide other contents
-                btn.querySelector(".icon-open").classList.add("hidden"); // Show close icon
-                btn.querySelector(".icon-close").classList.remove("hidden"); // Hide open icon
-                btn.classList.remove("bg-green-600", "text-white"); // Remove active background color and text color
-              }
-            });
-
-            const content = this.nextElementSibling; // Selects the next sibling element which is the collapsible content
-            const iconOpen = this.querySelector(".icon-open"); // Selects the icon for the open state
-            const iconClose = this.querySelector(".icon-close"); // Selects the icon for the close state
-
-            // Toggle hidden class to show/hide the collapsible content
-            content.classList.toggle("hidden");
-
-            // Toggle icon visibility
-            iconOpen.classList.toggle("hidden"); // Toggle visibility of the open icon
-            iconClose.classList.toggle("hidden"); // Toggle visibility of the close icon
-
-            // Toggle active state for button background color and text color
-            if (content.classList.contains("hidden")) {
-              this.classList.remove("bg-green-600", "text-white"); // Remove active state background color and text color
-            } else {
-              this.classList.add("bg-green-600", "text-white"); // Add active state background color and text color
-            }
-          });
-        });
-      });
-    </script>
-    </script>
-
+  <body class="text-gray-800 font-sans">
     <div id="header"></div>
-    <div class="relative w-full h-64 md:h-80 lg:h-96  xl:h-[580px] overflow-hidden mx-auto  px-4">
-        <img src="https://images.pexels.com/photos/5145/animal-easter-chick-chicken.jpg?auto=compress&cs=tinysrgb&w=600" alt="Agriculture field background image" class="absolute inset-0 object-cover w-full h-auto" loading="lazy" />
-        <div class="absolute inset-0 flex items-center justify-center">
-            <div class="text-white p-6 rounded-lg text-center ">
-                <h1 class=" text-white text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold ">FAQs</h1>
-            </div>
+    <div
+      class="relative w-full h-64 md:h-80 lg:h-96 xl:h-[580px] overflow-hidden mx-auto px-4"
+    >
+      <img
+        src="https://images.pexels.com/photos/5145/animal-easter-chick-chicken.jpg?auto=compress&cs=tinysrgb&w=600"
+        alt="Agriculture field background image"
+        class="absolute inset-0 object-cover w-full h-auto"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-white p-6 rounded-lg text-center">
+          <h1
+            class="text-white text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold"
+          >
+            FAQs
+          </h1>
         </div>
+      </div>
     </div>
 
     <div class="container mx-auto max-w-7xl px-4">
       <div
         class="flex flex-col md:flex-row justify-between sm:gap-4 md:gap-8 lg:gap-10 sm:mt-10 md:mt-15 lg:mt-15 xl:mt-20 mb-20"
       >
-       
-        <div class="w-full md:w-2/5  p-4 flex-col">
+        <div class="w-full md:w-2/5 p-4 flex-col">
           <div class="flex items-start gap-2">
             <!-- <img
               src="assets/images/hen.png"
               alt="Icon"
               class=" inset-0 w-12 h-10 "
             /> -->
-            <p class="text-green-600 text-base sm:text-lg md:text-lg lg:text-lg font-semibold">Find Your Answers</p>
+            <p
+              class="text-green-600 text-base sm:text-lg md:text-lg lg:text-lg font-semibold"
+            >
+              Find Your Answers
+            </p>
           </div>
           <!-- Title Section -->
-          <p class="text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6">Frequently Asked Questions</p>
-           <p class="text-black text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p
+            class="text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6"
+          >
+            Frequently Asked Questions
+          </p>
+          <p
+            class="text-black text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg mb-6"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
           <div class="">
             <h2 class="text-xl font-bold mb-4">Categories</h2>
             <ul class="space-y-2">
@@ -121,7 +75,7 @@
               </li>
               <li>
                 <button
-                  class="tab-button w-full text-left p-2 text-gray-800 "
+                  class="tab-button w-full text-left p-2 text-gray-800"
                   data-tab="tab2"
                 >
                   Products and Services
@@ -129,7 +83,7 @@
               </li>
               <li>
                 <button
-                  class="tab-button w-full text-left p-2 text-gray-800 "
+                  class="tab-button w-full text-left p-2 text-gray-800"
                   data-tab="tab3"
                 >
                   Supplier Information
@@ -137,7 +91,7 @@
               </li>
               <li>
                 <button
-                  class="tab-button w-full text-left p-2 text-gray-800 "
+                  class="tab-button w-full text-left p-2 text-gray-800"
                   data-tab="tab4"
                 >
                   Corporate Office
@@ -148,14 +102,9 @@
         </div>
 
         <!-- Second Div -->
-        <div
-          class="w-full lg:w-3/5 p-4 flex-col lg:mt-10"
-        >
+        <div class="w-full lg:w-3/5 p-4 flex-col lg:mt-10">
           <div id="tab1" class="tab-content">
-            
-            <div
-              class=" h-auto flex-col items-center justify-center"
-            >
+            <div class="h-auto flex-col items-center justify-center">
               <!-- Accordion Item 1 -->
               <div class="mb-5">
                 <button
@@ -190,7 +139,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">Common Questions?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    Common Questions?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -239,7 +190,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What is Liveosoft?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What is Liveosoft?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -288,7 +241,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">How can I contact Liveosoft?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I contact Liveosoft?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -334,7 +289,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What are Liveosoft’s operating hours?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What are Liveosoft’s operating hours?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -380,7 +337,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What sets Liveosoft apart from other livestock firms?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What sets Liveosoft apart from other livestock firms?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -397,9 +356,7 @@
           <div id="tab2" class="tab-content hidden">
             <!-- <h3 class="text-2xl font-semibold mb-4">Content for Tab 2</h3> -->
             <!-- <p>This is the content displayed when Tab 2 is active.</p> -->
-            <div
-              class=" h-auto flex-col items-center justify-center"
-            >
+            <div class="h-auto flex-col items-center justify-center">
               <!-- Accordion Item 6 -->
               <div class="mb-5">
                 <button
@@ -434,7 +391,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What types of livestock do you offer?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What types of livestock do you offer?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -480,7 +439,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">How can I place an order?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I place an order?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -526,7 +487,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">Can I track my order?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    Can I track my order?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -572,7 +535,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What are your payment options?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What are your payment options?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -618,7 +583,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">Do you offer bulk purchase discounts?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    Do you offer bulk purchase discounts?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -634,9 +601,7 @@
           <div id="tab3" class="tab-content hidden">
             <!-- <h3 class="text-2xl font-semibold mb-4">Content for Tab 3</h3> -->
             <!-- <p>This is the content displayed when Tab 3 is active.</p> -->
-            <div
-              class=" h-auto flex-col items-center justify-center"
-            >
+            <div class="h-auto flex-col items-center justify-center">
               <!-- Accordion Item 11 -->
               <div class="mb-5">
                 <button
@@ -671,7 +636,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">How can I register as a supplier with Liveosoft?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I register as a supplier with Liveosoft?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -717,7 +684,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What information is required for vendor registration?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What information is required for vendor registration?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -763,7 +732,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">How do I manage my orders?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How do I manage my orders?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -809,7 +780,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">How can I track deliveries?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I track deliveries?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -855,7 +828,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">How do I handle invoicing and receipts?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How do I handle invoicing and receipts?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -870,9 +845,7 @@
           </div>
           <div id="tab4" class="tab-content hidden">
             <!-- <h3 class="text-2xl font-semibold mb-4">Content for Tab 3</h3> -->
-            <div
-              class=" h-auto flex-col items-center justify-center"
-            >
+            <div class="h-auto flex-col items-center justify-center">
               <!-- Accordion Item 16 -->
               <div class="mb-5">
                 <button
@@ -907,7 +880,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What is the Central Dashboard used for?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What is the Central Dashboard used for?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -954,7 +929,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">How can I track activities at individual farms?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I track activities at individual farms?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -1000,7 +977,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg">What does the Stock Monitoring system do?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What does the Stock Monitoring system do?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -1046,7 +1025,7 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p  class="text-sm sm:text-base md:text-lg lg:text-lg"> 
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
                     Where can I find financial reports and profit & loss
                     statements?
                   </p>
@@ -1095,7 +1074,9 @@
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  <p class="text-sm sm:text-base md:text-lg lg:text-lg" >How is production planning managed?</p>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How is production planning managed?
+                  </p>
                 </button>
                 <div class="accordion-panel hidden bg-white text-gray-800">
                   <p
@@ -1122,9 +1103,11 @@
     <!-- Make sure you have an element with id="top" at the top of your page -->
     <div id="top"></div>
 
-    <script src="./assets/js/link.js"></script>
+    <!-- <div id="footer"></div> -->
 
-    
-    <div id="footer"></div>
+    <script src="../js/utils/header.js"></script>
+    <script src="../js/faq.js"></script>
+    <script src="../js/nav.js"></script>
+    <!-- <script src="../js/utils/footer.js"></script> -->
   </body>
 </html>
