@@ -46,19 +46,19 @@ dropdownContent.addEventListener("mouseleave", function () {
   dropdownContent.classList.add("hidden");
 });
 
-function toggleAccordion(id) {
-  const submenu = document.getElementById(`submenu-${id}`);
-  const icon = document.getElementById(`icon-${id}`);
+function toggleAccordion() {
+  const content = document.getElementById("accordion-content-mobilemenu");
+  const icon = document.getElementById("icon");
 
-  submenu.classList.toggle("hidden"); // Toggle submenu visibility
-  // Toggle between two icons: "▼" for closed and "▲" for open
-  icon.textContent = submenu.classList.contains("hidden") ? "▼" : "▲";
+  // Toggle accordion content visibility
+  content.classList.toggle("hidden");
+
+  // Change icon based on the visibility of the content
+  if (content.classList.contains("hidden")) {
+    icon.classList.remove("fa-angle-down");
+    icon.classList.add("fa-angle-right");
+  } else {
+    icon.classList.remove("fa-angle-right");
+    icon.classList.add("fa-angle-down");
+  }
 }
-
-// Toggle mobile menu visibility
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu1");
-
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});

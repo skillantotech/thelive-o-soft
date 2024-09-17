@@ -58,7 +58,6 @@
           </div>
         </div>
       </nav>
-      <!-- p-4 lg:py-4 -->
       <!-- Main Navbar -->
       <nav class="bg-white py-4 px-4 lg:px-6 h-20">
         <div class="container mx-auto flex justify-between items-center">
@@ -99,7 +98,7 @@
             <div class="group relative flex items-center text-left h-full py-2">
               <!-- Dropdown Button -->
               <div
-                class="text-black font-semibold cursor-pointer"
+                class="text-black font-semibold cursor-pointer hover:text-green-800"
                 id="dropdownBtn"
               >
                 Resources
@@ -232,70 +231,32 @@
             class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
           />
 
-          <a
-            id="menu-btn"
-            class="flex text-black justify-between items-center p-1 font-semibold"
-          >
-            <p>Resource</p>
-            <button onclick="toggleAccordion(1)" class="focus:outline-none">
-              <span
-                id="icon-1"
-                class="text-black transform transition-transform"
-                >▼</span
-              >
-            </button>
-          </a>
-          <hr
+    <a id="menu-btn" class="flex text-black justify-between items-center p-1 font-semibold">
+    <p>Resource</p>
+    <button onclick="toggleAccordion()" class="focus:outline-none">
+      <i id="icon" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
+    </button>
+  </a>
+<hr
             class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
           />
-
-          <div id="mobile-menu1" class="hidden bg-white w-full p-3">
-            <!-- Accordion Item 1 -->
-            <div class="border-b">
+  <div id="accordion-content-mobilemenu" class="hidden p-4 ">
+    <!-- Accordion content here -->
+    <div class="">
               <div class="flex justify-between items-center">
-                <a href="#" class="block py-2 text-black">Blog</a>
-                <!-- Icon to toggle submenu -->
-                <button onclick="toggleAccordion(1)" class="focus:outline-none">
-                  <span
-                    id="icon-1"
-                    class="text-black transform transition-transform"
-                    >▼</span
-                  >
+                <a href="#" class="block py-2 text-black">- Blog</a>               
                 </button>
-              </div>
-              <!-- Submenu (Initially hidden) -->
-              <div id="submenu-1" class="hidden ml-4">
-                <a
-                  href="./src/pages/blog.html"
-                  class="block py-1 px-4 text-black"
-                  >- Blog</a
-                >
-              </div>
+              </div>                    
             </div>
-
-            <!-- Accordion Item 2 -->
-            <div class="border-b">
+ <!-- Accordion Item 2 -->
+            <div class="">
               <div class="flex justify-between items-center">
-                <a href="#" class="block py-2 text-black">News</a>
-                <!-- Icon to toggle submenu -->
-                <button onclick="toggleAccordion(2)" class="focus:outline-none">
-                  <span
-                    id="icon-2"
-                    class="text-black transform transition-transform"
-                    >▼</span
-                  >
-                </button>
-              </div>
-              <!-- Submenu (Initially hidden) -->
-              <div id="submenu-2" class="hidden ml-4">
-                <a
-                  href="./src/pages/news.html"
-                  class="block py-1 px-4 text-black"
-                  >- News</a
-                >
-              </div>
+                <a href="#" class="block py-2 text-black">- News</a>              
+              </div>         
             </div>
-          </div>
+  </div>
+
+         
         </div>
         <div class="flex item-center justify-center p-4">
           <a
@@ -307,13 +268,16 @@
         </div>
       </div>
     </header>
+
+   <!-- <section class="py-20">home</section> -->
+  
     <!-- Hero Section -->
-    <!-- <section class="HeroSection">
+     <!-- <section class="HeroSection">
       <div
-        class="flex flex-col gap-5 items-center justify-center p-10 bg-blue-500 sm:flex-row"
+        class=" bg-blue-500 sm:flex-row"
         style="background-image: url()"
       >
-        <h1 class="text-black bg-yellow-300">Hello World</h1>
+     
         <p class="">
           Milan Branch Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Sed sunt rem doloribus natus harum, eius nobis deleniti, ab similique
@@ -321,7 +285,7 @@
           magni omnis?
         </p>
       </div>
-    </section> -->
+    </section>  -->
 
     <!-- <section>
       <div
@@ -331,8 +295,8 @@
         
       </div>
     </section> -->
-
-    <!-- <footer class="bg-yellow-800 text-white p-4">
+<!-- 
+    <footer class="bg-yellow-800 text-white p-4">
       <div class="container mx-auto">
         <h1 class="text-xl">TheoLiveSoft Footer</h1>
         <nav class="mt-2">
@@ -348,6 +312,6 @@
           </ul>
         </nav>
       </div>
-    </footer> -->
+    </footer>  -->
   </body>
 </html>
