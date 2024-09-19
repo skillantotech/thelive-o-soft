@@ -1,4 +1,4 @@
-fetch("../Components/Footer/footer.html")
+fetch("/src/Components/Footer/footer.html")
   .then((response) => {
     console.log(response);
     return response.text();

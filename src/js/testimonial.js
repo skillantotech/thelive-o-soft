@@ -1,47 +1,74 @@
-const testimonials = [
-  { text: "This is the first testimonial.", author: "John Doe", imageUrl: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" },
-  { text: "This is the second testimonial.", author: "Jane Smith", imageUrl: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" },
-  { text: "This is the third testimonial.", author: "Michael Johnson", imageUrl: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" },
-  { text: "This is the fourth testimonial.", author: "John Doe", imageUrl: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" },
-  { text: "This is the fifth testimonial.", author: "Jane Smith", imageUrl: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" },
-  { text: "This is the sixth testimonial.", author: "Michael Johnson", imageUrl: "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" },
+const texts = [
+    {
+        title: "Welcome to Liveosoft",
+        description: "A cutting-edge livestock firm established in 2024 by visionaries Mr. X, Mr. Y, and Mr. Z. With our corporate office strategically located in Bhubaneswar, India, we are committed to revolutionizing the livestock industry through innovation, technology, and sustainable practices."
+    },
+    {
+        title: "Innovation in Livestock Management",
+        description: "We are pioneers in integrating technology with traditional farming practices, ensuring sustainable and profitable livestock management."
+    },
+    {
+        title: "Sustainable Practices",
+        description: "Our commitment to sustainability ensures that our livestock practices are environmentally friendly and beneficial to local communities."
+    },
+    {
+        title: "Leading the Future",
+        description: "At Liveosoft, we are leading the future of livestock management with cutting-edge technologies and practices."
+    }
 ];
 
+let currentIndex = 0;
 
-const testimonialSlider = document.getElementById("testimonial-slider");
+function updateText() {
+    const titleElement = document.querySelector("#carousel-text .text-content h1");
+    const descriptionElement = document.querySelector("#carousel-text .text-content p");
 
-testimonials.map((testimonial, index) => {
-  const testimonialDiv = document.createElement("div");
-  testimonialDiv.className = `card-${index} absolute  w-full h-fit p-6 duration-1000 flex justify-center ease-in-out transform -translate-x-full`;
+    titleElement.textContent = texts[currentIndex].title;
+    descriptionElement.textContent = texts[currentIndex].description;
 
-  testimonialDiv.innerHTML = `
-          <div class="flex flex-col justify-center items-center max-w-2xl text-center p-4 bg-red-500">
-              <p class="text-lg font-medium">${testimonial.text}</p>
-              <h4 class="mt-4 text-sm font-semibold">- ${testimonial.author}</h4>
-              <img src=${testimonial.imageUrl} class=" h-10 w-10"/>
-          </div>`;
+    currentIndex = (currentIndex + 1) % texts.length;
+}
 
-  testimonialSlider.appendChild(testimonialDiv);
+setInterval(updateText, 4000);
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const slider = document.querySelector('.testimonial-slider');
+//     const testimonials = document.querySelectorAll('.testimonial');
+//     let index = 0;
+
+//     function slideTestimonials() {
+//         index++;
+//         if (index >= testimonials.length) {
+//             index = 0;
+//         }
+//         slider.style.transform = `translateX(-${index * (testimonials[0].clientWidth + 32)}px)`;
+//     }
+
+//     setInterval(slideTestimonials, 5000); // Slide every 5 seconds
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector('.testimonial-slider');
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+    const testimonialCount = testimonials.length;
+
+    function slideTestimonials() {
+        index++;
+        if (index >= testimonialCount) {
+            slider.style.transition = 'none'; // Disable transition for instant reset
+            slider.style.transform = 'translateX(0)'; // Move to the start
+            index = 0; // Reset index
+            setTimeout(() => {
+                slider.style.transition = 'transform 0.7s ease-in-out'; // Re-enable transition
+                slideTestimonials(); // Call again to slide to the next
+            }, 50); // Short delay before moving to the next testimonial
+        } else {
+            slider.style.transform = `translateX(-${index * (testimonials[0].clientWidth + 32)}px)`;
+        }
+    }
+
+    setInterval(slideTestimonials, 2000); // Slide every 5 seconds
 });
-
-const testimonialCards = document.querySelectorAll("#testimonial-slider > div");
-
-let index = 0;
-testimonialCards[index].classList.add("translate-x-0"); // Show the first testimonial initially
-
-setInterval(() => {
-  // Move the current testimonial out of view
-  testimonialCards[index].classList.remove("translate-x-0");
-  if (index > 0) testimonialCards[index].classList.add("translate-x-full");
-  else testimonialCards[index].classList.add("-translate-x-full");
-
-  // Increment index and wrap around using modulo
-  index = (index + 1) % testimonials.length;
-
-  // Move the next testimonial into view
-  testimonialCards[index].classList.remove(
-    "-translate-x-full",
-    "translate-x-full"
-  );
-  testimonialCards[index].classList.add("translate-x-0");
-}, 3000);
