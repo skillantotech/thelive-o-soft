@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Accordion with Tailwind CSS</title>
+    <link href="/output.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5e00c640f4.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- <script src="./src/js/nav.js" defer></script> -->
+  </head>
+
+  <body class="text-gray-800 font-sans">
+    <div id="header"></div>
+    <div
+      class="relative w-full h-64 md:h-80 lg:h-96 xl:h-[580px] overflow-hidden mx-auto px-4"
+    >
+      <img
+        src="https://images.pexels.com/photos/1769279/pexels-photo-1769279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Agriculture field background image"
+        class="absolute inset-0 w-full object-fit h-auto"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-white p-6 rounded-lg text-center">
+          <h1
+            class="text-white text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold"
+          >
+            FAQs
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto max-w-7xl px-4">
+      <div
+        class="flex flex-col md:flex-row justify-between sm:gap-4 md:gap-8 lg:gap-10 sm:mt-10 md:mt-15 lg:mt-15 xl:mt-20 mb-20"
+      >
+        <div class="w-full md:w-2/5 p-4 flex-col">
+          <div class="flex items-start gap-2">
+            <!-- <img
+              src="assets/images/hen.png"
+              alt="Icon"
+              class=" inset-0 w-12 h-10 "
+            /> -->
+            <p
+              class="text-green-600 text-base sm:text-lg md:text-lg lg:text-lg font-semibold"
+            >
+              Find Your Answers
+            </p>
+          </div>
+          <!-- Title Section -->
+          <p
+            class="text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6"
+          >
+            Frequently Asked Questions
+          </p>
+          <p
+            class="text-black text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg mb-6"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="">
+            <h2 class="text-xl font-bold mb-4">Categories</h2>
+            <ul class="space-y-2">
+              <li>
+                <button
+                  class="tab-button w-full text-left p-2 text-gray-800 active"
+                  data-tab="tab1"
+                >
+                  General Information
+                </button>
+              </li>
+              <li>
+                <button
+                  class="tab-button w-full text-left p-2 text-gray-800"
+                  data-tab="tab2"
+                >
+                  Products and Services
+                </button>
+              </li>
+              <li>
+                <button
+                  class="tab-button w-full text-left p-2 text-gray-800"
+                  data-tab="tab3"
+                >
+                  Supplier Information
+                </button>
+              </li>
+              <li>
+                <button
+                  class="tab-button w-full text-left p-2 text-gray-800"
+                  data-tab="tab4"
+                >
+                  Corporate Office
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Second Div -->
+        <div class="w-full lg:w-3/5 p-4 flex-col lg:mt-10">
+          <div id="tab1" class="tab-content">
+            <div class="h-auto flex-col items-center justify-center">
+              <!-- Accordion Item 1 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white flex focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    Common Questions?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    We’ve compiled answers to the most frequently asked
+                    questions to help you find the information you need quickly.
+                    Whether you’re a supplier, retailer, or customer, our FAQ
+                    section covers the most common inquiries about our products,
+                    services, and processes.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 2 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button flex gap-2 w-full text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What is Liveosoft?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Liveosoft is a livestock firm established in 2024,
+                    specializing in high-quality livestock procurement,
+                    production planning, and supply chain management. Where is
+                    Liveosoft located? Our corporate office is located in
+                    Bhubaneswar, India.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 3 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button flex gap-2 w-full text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I contact Liveosoft?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    You can contact us via our website's contact form, email us
+                    at info@liveosoft.com, or call us at [insert phone number].
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 4 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button flex gap-2 w-full text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What are Liveosoft’s operating hours?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Our office is open Monday through Friday, from 9:00 AM to
+                    6:00 PM IST.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 5 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What sets Liveosoft apart from other livestock firms?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    We combine traditional livestock practices with advanced
+                    agritech solutions to ensure top quality, efficiency, and
+                    sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab2" class="tab-content hidden">
+            <!-- <h3 class="text-2xl font-semibold mb-4">Content for Tab 2</h3> -->
+            <!-- <p>This is the content displayed when Tab 2 is active.</p> -->
+            <div class="h-auto flex-col items-center justify-center">
+              <!-- Accordion Item 6 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button flex gap-2 w-full text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What types of livestock do you offer?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    We offer a variety of livestock including poultry, goats,
+                    fish, and prawns.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 7 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full gap-2 flex text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I place an order?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Orders can be placed through our online ordering system
+                    available on the Consumers/Retailers page.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 8 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    Can I track my order?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Yes, you can track your order through our customer portal
+                    once you have placed it.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 9 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button flex gap-2 w-full text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What are your payment options?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    We accept various payment methods, including credit/debit
+                    cards and bank transfers.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 10 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    Do you offer bulk purchase discounts?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Yes, we offer discounts for bulk purchases. Please contact
+                    our sales team for more information.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab3" class="tab-content hidden">
+            <!-- <h3 class="text-2xl font-semibold mb-4">Content for Tab 3</h3> -->
+            <!-- <p>This is the content displayed when Tab 3 is active.</p> -->
+            <div class="h-auto flex-col items-center justify-center">
+              <!-- Accordion Item 11 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I register as a supplier with Liveosoft?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    You can register through our Vendor Registration portal
+                    available on the Raw Material Suppliers page.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 12 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button flex gap-2 w-full text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What information is required for vendor registration?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    We require details such as company name, contact
+                    information, and relevant certifications.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 13 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How do I manage my orders?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Orders can be managed through our Order Management system on
+                    the Raw Material Suppliers page.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 14 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I track deliveries?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Deliveries can be tracked using our Delivery Management tool
+                    available in the same section.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 15 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How do I handle invoicing and receipts?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Invoices and receipts can be processed through our invoicing
+                    system on the Raw Material Suppliers page.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab4" class="tab-content hidden">
+            <!-- <h3 class="text-2xl font-semibold mb-4">Content for Tab 3</h3> -->
+            <div class="h-auto flex-col items-center justify-center">
+              <!-- Accordion Item 16 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What is the Central Dashboard used for?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    The Central Dashboard provides comprehensive oversight of
+                    corporate activities, including production and financial
+                    data.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 17 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How can I track activities at individual farms?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Farm level tracking is managed through our GIS Tagging
+                    system.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 18 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    What does the Stock Monitoring system do?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    It helps monitor livestock and feed stock levels to ensure
+                    optimal inventory management.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 19 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    Where can I find financial reports and profit & loss
+                    statements?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Financial reports and P&L statements are available in the
+                    Finance & P&L section of our Corporate Office platform.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Accordion Item 20 -->
+              <div class="mb-5">
+                <button
+                  class="accordion-button w-full flex gap-2 text-left p-4 bg-gray-200 text-black hover:bg-green-600 hover:text-white focus:outline-none rounded-md"
+                >
+                  <svg
+                    class="icon-open w-6 h-6 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <!-- Icon for close state -->
+                  <svg
+                    class="icon-close w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  <p class="text-sm sm:text-base md:text-lg lg:text-lg">
+                    How is production planning managed?
+                  </p>
+                </button>
+                <div class="accordion-panel hidden bg-white text-gray-800">
+                  <p
+                    class="border-b-gray-200 bg-gray-200 text-black p-12 mb-4 rounded-md"
+                  >
+                    Production planning is handled through detailed plans and
+                    schedules accessible in our Corporate Office dashboard.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Back to Top Button -->
+    <a
+      href="faq.html"
+      class="fixed bottom-6 right-6 h-10 w-10 flex items-center justify-center bg-green-600 text-white text-xl rounded-full shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-opacity-30 transition"
+    >
+      ↑
+    </a>
+
+    <!-- Make sure you have an element with id="top" at the top of your page -->
+    <div id="top"></div>
+
+    <div id="footer"></div>
+
+    <script src="../js/utils/header.js"></script>
+    <script src="../js/utils/footer.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/faq.js"></script>
+    <!-- <script src="../js/utils/footer.js"></script> -->
+  </body>
+</html>
