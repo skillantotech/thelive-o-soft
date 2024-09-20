@@ -6,7 +6,7 @@
 //     document.getElementById("header").innerHTML = data;
 //     // console.log(data);
 //   });
-fetch("../Components/Header/header.html")
+fetch("/src/Components/Header/header.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("header").innerHTML = data;
