@@ -306,36 +306,102 @@
         </div>
      </div>  -->
 <!-- Home Page -->
-<section class="relative bg-cover bg-center py-20" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCDL9up2NOCkpVv3zjfobQidMyd4ZQ92rF1g&s');">
-  <!-- Overlay for better text readability -->
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Introduction-->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center gap-8 mb-16 mt-0">
-        <div class="md:w-1/2 mt-4 md:mt-0">
-          <h2 class="text-2xl md:text-3xl font-bold text-center md:text-left text-green-950 mt-10"> Live O Soft</h2>
-          <p class="text-base md:text-lg text-gray-950 mt-4 text-center md:text-left">
-               Welcome to Liveosoft, a cutting-edge livestock firm established in 2024 by visionaries Mr. X, Mr. Y, and Mr. Z. With our corporate office strategically located in Bhubaneswar, India, we are committed to revolutionising the livestock industry through innovation, technology, and sustainable practices. At Liveosoft, we bridge the gap between traditional farming methods and modern agritech solutions, ensuring that our clients receive the best livestock products backed by the latest advancements in animal husbandry.
-          </p>
-        </div>
-        <div class="md:w-1/2">
-          <img
-            src="https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image/26bc78ff2107.jpg"
-            alt="Mission Image"
-            class="w-full h-72 object-cover rounded-lg"
-          />
-        </div>
+<section class="relative h-screen mt-16 bg-black">
+  <!-- Slider Container -->
+  <div class="slider relative h-full w-full overflow-hidden">
+      <!-- Slider images will be injected by JS -->
+  </div>
+
+  <!-- Content Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-4 sm:px-0 z-10">
+      <h1 id="sliderTitle" class="text-4xl sm:text-5xl font-bold animate-fadeIn">Fresh Organic Food</h1>
+      <p id="sliderDescription" class="text-lg sm:text-xl mt-4 animate-fadeIn">Locally grown, eco-friendly, and healthy foods delivered to your door.</p>
+      
+      <!-- Dynamic Buttons Container -->
+      <div class="mt-12 flex space-x-4 sm:px-8 buttons-container">
+          
       </div>
-    </div>
-    <div class="flex justify-center relative z-10">
-      <button class="mt-4 px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-300">
-        Read more
-      </button>
-    </div>
+  </div>
+  
+  <!-- Slider Navigation Controls (Left and right )-->
+  <div class="absolute inset-0 flex justify-between items-center px-4 sm:px-8">
+      <button id="prevBtn" class="text-white text-3xl bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-70 transition duration-300" aria-label="Previous Slide">&lt;</button>
+      <button id="nextBtn" class="text-white text-3xl bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-70 transition duration-300" aria-label="Next Slide">&gt;</button>
   </div>
 </section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slidesData = [
+        {
+            image: './assets/images/slider1.jpg',
+            caption: 'Fresh Organic Foods Delivered',
+            title: 'Fresh Organic Food',
+            description: 'Locally grown, eco-friendly, and healthy foods delivered to your door.',
+            buttons: [
+                { text: 'Shop Now', link: '/src/pages/career.html', style: 'bg-green-700 text-white hover:bg-green-900' },
+                { text: 'Learn More', link: '/about-us', style: 'border border-white text-white hover:bg-white hover:text-green-600' }
+            ]
+        },
+        {
+            image: './assets/images/slider2.jpg',
+            caption: 'Sustainably Grown Vegetables',
+            title: 'Sustainably Grown Vegetables',
+            description: 'Eco-friendly, sustainable farming practices ensure fresh and healthy produce.',
+            buttons: [
+                { text: 'Explore Vegetables', link: '/vegetables', style: 'bg-green-700 text-white hover:bg-green-900' },
+                { text: 'Our Practices', link: '/practices', style: 'border border-white text-white hover:bg-white hover:text-green-600' }
+            ]
+        },
+        {
+            image: './assets/images/slider3.jpg',
+            caption: 'Eco-Friendly Farming Practices',
+            title: 'Eco-Friendly Farming Practices',
+            description: 'Our farming methods support the environment and provide nutritious foods.',
+            buttons: [
+                { text: 'View Our Farms', link: '/farms', style: 'bg-green-700 text-white hover:bg-green-900' },
+                { text: 'Contact Us', link: '/contact', style: 'border border-white text-white hover:bg-white hover:text-green-600' }
+            ]
+        }
+    ];        
+
+    const sliderContainer = document.querySelector('.slider');
+    const buttonsContainer = document.querySelector('.buttons-container');
+    const titleElement = document.getElementById('sliderTitle');
+    const descriptionElement = document.getElementById('sliderDescription');
+    let currentSlide = 0;
+
+    function renderSlide() {
+        const slide = slidesData[currentSlide];
+        sliderContainer.innerHTML = `
+            <img src="${slide.image}" class="object-cover w-full h-full" alt="${slide.caption}">
+        `;
+        titleElement.textContent = slide.title;
+        descriptionElement.textContent = slide.description;
+        buttonsContainer.innerHTML = slide.buttons.map(button => `
+            <a href="${button.link}" class="py-2 px-4 rounded-lg ${button.style}  transition duration-300">${button.text}</a>
+        `).join('');
+    }
+
+    function showNextSlide() {
+        currentSlide = (currentSlide + 1) % slidesData.length;
+        renderSlide();
+    }
+
+    function showPrevSlide() {
+        currentSlide = (currentSlide - 1 + slidesData.length) % slidesData.length;
+        renderSlide();
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', showNextSlide);
+    document.getElementById('prevBtn').addEventListener('click', showPrevSlide);
+
+    renderSlide();
+    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+});
+
+
+
+</script>
 
 
 
