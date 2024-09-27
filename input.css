@@ -1,12 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.hexagon {
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transform: rotate(90deg); /* Rotate the hexagon */
-}
-.content-wrapper {
-    transform: rotate(-90deg); /* Rotate the content back */
+.circle {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%; /* Makes the div a circle */
+    overflow: hidden; /* Ensures content stays within the circle */
+    
 }
 .gradient-bg {
     background: linear-gradient(135deg, #8A2BE2, #4169E1);
