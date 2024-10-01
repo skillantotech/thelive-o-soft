@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TheLiveOSoft</title>
     <link href="./output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       rel="stylesheet"
     />
-    <script src="./src/js/opacity.js" defer></script>
     <script src="./src/js/nav.js" defer></script>
   </head>
   <body>
@@ -99,17 +97,23 @@
             <a href="/src/pages/career.html" class="hover:text-green-800">Career</a>
             <div class="group relative flex items-center text-left h-full py-2">
               <!-- Dropdown Button -->
-              <div class="text-black font-semibold cursor-pointer hover:text-green-800 z-50" id="dropdownBtn">
-                Resources
               <div
+                class="text-black font-semibold cursor-pointer hover:text-green-800 z-30"
+                id="dropdownBtn"
+              >
+                Resources
+
+                <div
                   id="dropdownContent"
-                  class="dropdown-content absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg hidden group-hover:block rounded-md">
+                  class="dropdown-content absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg hidden group-hover:block rounded-md"
+                >
                   <ul class="py-1">
                     <li>
                       <a
                         href="/src/pages/blog.html"
                         class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800"
-                        >Blogs</a>
+                        >Blogs</a
+                      >
                     </li>
                     <li>
                       <a
@@ -300,7 +304,7 @@
         </div>
      </div>  -->
 <!-- Home Page -->
-<section class="relative h-screen  bg-black">
+<section class="relative h-64 sm:h-80 md:h-96 lg:h-[60vh] bg-black">
   <!-- Slider Container -->
   <div class="slider relative h-full w-full overflow-hidden">
       <!-- Slider images will be injected by JS -->
@@ -322,7 +326,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const slidesData = [
         {
-            image: './assets/images/slider1.jpg',
+            image: '/src/assets/Images/HomePage/Hero/slider1.jpg',
             caption: 'Fresh Organic Foods Delivered',
             title: 'Fresh Organic Food',
             description: 'Locally grown, eco-friendly, and healthy foods delivered to your door.',
@@ -332,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
-            image: './assets/images/slider2.jpg',
+            image: '/src/assets/Images/HomePage/Hero/slider2.jpg',
             caption: 'Sustainably Grown Vegetables',
             title: 'Sustainably Grown Vegetables',
             description: 'Eco-friendly, sustainable farming practices ensure fresh and healthy produce.',
@@ -342,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
-            image: './assets/images/slider3.jpg',
+            image: '/src/assets/Images/HomePage/Hero/slider3.jpg',
             caption: 'Eco-Friendly Farming Practices',
             title: 'Eco-Friendly Farming Practices',
             description: 'Our farming methods support the environment and provide nutritious foods.',
@@ -975,7 +979,7 @@ document.addEventListener('DOMContentLoaded', function() {
       class="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left"
     >
       <img
-        src="/assets/images/logo.png"
+        src=/src/assets/Images/HomePage/Hero/logo.png"
         alt="Organic Farm logo"
         class="w-60 h-30 mb-2"
       />
