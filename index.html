@@ -1,219 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TheLiveOSoft</title>
     <link href="./output.css" rel="stylesheet" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
     <script src="./src/js/nav.js" defer></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="text-white">
-      <nav class="hidden lg:flex py-4 px-4 lg:px-6 bg-gray-200 text-black">
-        <div class="container mx-auto flex justify-between items-center">
-          <div class="flex justify-center flex-grow space-x-5">
-            <a href="#" class="text-sm hover:text-green-800">
-              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-              558 Main Street, India
-            </a>
-            <a href="#" class="text-sm hover:text-green-800">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i>
-              +000 (123) 456 88
-            </a>
-            <a href="#" class="text-sm hover:text-green-800">
-              <i class="fa-regular fa-envelope"></i>
-              support@gmail.com
-            </a>
-          </div>
-
-          <div
-            id="navbar"
-            class="hidden lg:flex space-x-8 flex-grow justify-center"
-          >
-            <!-- Add your nav links here -->
-          </div>
-
-          <div
-            class="hidden items-center space-x-4 lg:flex flex-grow justify-center"
-          >
-            <p class="text-sm text-black">Follow Us:</p>
-            <a href="#" class="relative hover:text-green-800"
-              ><i class="fa-brands fa-facebook-f" aria-hidden="true"></i
-            ></a>
-            <a href="#" class="relative hover:text-green-800"
-              ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i
-            ></a>
-            <a href="#" class="relative hover:text-green-800"
-              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
-            ></a>
-            <a href="#" class="relative hover:text-green-800"
-              ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i
-            ></a>
-          </div>
-        </div>
-      </nav>
-      <!-- Main Navbar -->
-      <nav class="bg-white py-4 px-4 lg:px-6">
-        <div class="container mx-auto flex justify-center items-center">
-          <!-- <div class="flex justify-center lg:justify-center flex-grow px-4"> -->
-          <div class="flex md:justify-left lg:justify-center flex-grow px-4">
-            <a href="./index.html" class="text-black text-2xl font-bold">Liveosoft</a>
-          </div>
-
-          <div class="flex-1 flex justify-end lg:hidden">
-            <button id="navbar-toggle" class="text-black focus:outline-none">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12H16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
-
-          <div
-            id="navbar-links"
-            class="hidden lg:flex space-x-8 flex-grow justify-center items-center text-black font-semibold"
-          >
-            <a href="/index.html" class="hover:text-green-800">Home</a>
-            <a href="/src/pages/about.html" class="hover:text-green-800"
-              >About</a
-            >
-            <a href="/src/pages/contact.html" class="hover:text-green-800"
-              >Contact</a
-            >
-            <a href="/src/pages/career.html" class="hover:text-green-800">Career</a>
-            <div class="group relative flex items-center text-left h-full py-2">
-              <!-- Dropdown Button -->
-              <div
-                class="text-black font-semibold cursor-pointer hover:text-green-800"
-                id="dropdownBtn"
-              >
-                Resources
-
-                <div
-                  id="dropdownContent"
-                  class="dropdown-content absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg hidden group-hover:block rounded-md"
-                >
-                  <ul class="py-1">
-                    <li>
-                      <a
-                        href="/src/pages/blog.html"
-                        class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800"
-                        >Blogs</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/src/pages/blog.html"
-                        class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800"
-                        >News</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800"
-                        >Others</a
-                      >
-                    </li>
-                  </ul>
+        <nav class="hidden lg:flex py-4 px-4 lg:px-6 bg-gray-200 text-black">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex justify-center flex-grow space-x-5">
+                    <a href="#" class="text-sm hover:text-green-800">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        558 Main Street, India
+                    </a>
+                    <a href="#" class="text-sm hover:text-green-800">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        +000 (123) 456 88
+                    </a>
+                    <a href="#" class="text-sm hover:text-green-800">
+                        <i class="fa-regular fa-envelope"></i>
+                        support@gmail.com
+                    </a>
                 </div>
-              </div>
 
-              <!-- Dropdown Menu (hidden by default) -->
+                <div id="navbar" class="hidden lg:flex space-x-8 flex-grow justify-center">
+                    <!-- Add your nav links here -->
+                </div>
+
+                <div class="hidden items-center space-x-4 lg:flex flex-grow justify-center">
+                    <p class="text-sm text-black">Follow Us:</p>
+                    <a href="#" class="relative hover:text-green-800"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="relative hover:text-green-800"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="relative hover:text-green-800"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="relative hover:text-green-800"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                </div>
             </div>
-            <a href="./src/pages/faq.html" class="hover:text-green-800">Faqs</a>
-          </div>
+        </nav>
+        <!-- Main Navbar -->
+        <nav class="bg-white py-4 px-4 lg:px-6">
+            <div class="container mx-auto flex justify-center items-center">
+                <!-- <div class="flex justify-center lg:justify-center flex-grow px-4"> -->
+                <div class="flex md:justify-left lg:justify-center flex-grow px-4">
+                    <a href="./index.html" class="text-black text-2xl font-bold">Liveosoft</a>
+                </div>
+                <!-- <div class="flex-grow">
+        <a href="./index.html" class="text-black text-2xl font-bold">Liveosoft</a>
+      </div> -->
+                <div class="flex-1 flex justify-end lg:hidden">
+                    <button id="navbar-toggle" class="text-black focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12H16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
 
-          <div
-            class="hidden space-x-4 lg:flex flex-grow justify-center items-center"
-          >
-            <a href="#" class="relative hover:text-green-800 font-extrabold"
-              ><i class="fa fa-cart-arrow-down text-2xl" aria-hidden="true"></i
-            ></a>
-            <a
-              href="#"
-              class="inline-block bg-green-800 text-white font-bold py-2 px-4 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-opacity-75"
-            >
-              Book a Meeting
-            </a>
-          </div>
-        </div>
-      </nav>
+                <div id="navbar-links" class="hidden lg:flex space-x-8 flex-grow justify-center items-center text-black font-semibold">
+                    <a href="/index.html" class="hover:text-green-800">Home</a>
+                    <a href="/src/pages/about.html" class="hover:text-green-800">About</a>
+                    <a href="/src/pages/contact.html" class="hover:text-green-800">Contact</a>
+                    <a href="/src/pages/career.html" class="hover:text-green-800">Career</a>
+                    <div class="group relative flex items-center text-left h-full py-2">
+                        <!-- Dropdown Button -->
+                        <div class="text-black font-semibold cursor-pointer hover:text-green-800" id="dropdownBtn">
+                            Resources
+
+                            <div id="dropdownContent" class="dropdown-content absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg hidden group-hover:block rounded-md z-50">
+                                <ul class="py-1">
+                                    <li>
+                                        <a href="/src/pages/blog.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="/src/pages/blog.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="./src/pages/faq.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Faqs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Menu (hidden by default) -->
+                    </div>
+
+                    <div class="group relative flex items-center text-left h-full py-2">
+                        <!-- Dropdown Button -->
+                        <div class="text-black font-semibold cursor-pointer hover:text-green-800" id="dropdownBtn">
+                            Platform
+
+                            <div id="dropdownContent" class="dropdown-content absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg hidden group-hover:block rounded-md z-50">
+                                <ul class="py-1">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Liveosoft Software</a>
+                                    </li>
+                                    <li>
+                                        <a href="/src/pages/hospitallyService.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Hospitality as a Service (HaaS)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Bpm & Erp</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Menu (hidden by default) -->
+                    </div>
+
+                    <a href="./src/pages/lob.html" class="hover:text-green-800">Business</a>
+
+                    <!-- <a href="./src/pages/faq.html" class="hover:text-green-800">Faqs</a> -->
+                </div>
+
+                <div class="hidden space-x-4 lg:flex flex-grow justify-center items-center">
+                    <a href="#" class="relative hover:text-green-800 font-extrabold"><i class="fa fa-cart-arrow-down text-2xl" aria-hidden="true"></i></a>
+                    <a href="#" class="inline-block bg-green-800 text-white font-bold py-2 px-4 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-opacity-75">
+                        Book a Meeting
+                    </a>
+                </div>
+            </div>
+        </nav>
 
 
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="fixed top-0 left-0 w-full h-full mobile-menu hidden lg:hidden bg-white bg-opacity-100 z-50 overflow-auto"
-      >
-        <div
-          class="flex justify-between items-center p-4 font-bold text-white bg-green-500"
-        >
-          <div class="text-xl">Main Menu</div>
-          <!-- Aligns to the left -->
-          <button id="close-menu" class="text-white">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full mobile-menu hidden lg:hidden bg-white bg-opacity-100 z-50 overflow-auto">
+            <div class="flex justify-between items-center p-4 font-bold text-white bg-green-500">
+                <div class="text-xl">Main Menu</div>
+                <!-- Aligns to the left -->
+                <button id="close-menu" class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
 
-        <!-- nav anchor -->
-        <div class="p-6 space-y-4">
-          <a
-            href="./index.html"
-            class="block text-black justify-between items-center p-1 font-semibold"
-          >
-            Home
-          </a>
-          <hr
-            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
-          />
+            <!-- nav anchor -->
+            <div class="p-6 space-y-4">
+                <a href="/index.html" class="block text-black justify-between items-center p-1 font-semibold">
+                    Home
+                </a>
+                <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
 
-          <a
-            href="./src/pages/about.html"
-            class="block text-black justify-between items-center p-1 font-semibold"
-          >
-            About
-          </a>
-          <hr
-            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
-          />
-          <a
-           href="./src/pages/career.html"
-           class="block text-black justify-between items-center p-1 font-semibold"
-         >
-           Career
-         </a>
-          <hr
-            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
-          />
-         <a
+                <a href="/src/pages/about.html" class="block text-black justify-between items-center p-1 font-semibold">
+                    About
+                </a>
+                <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
+                <a href="./src/pages/career.html" class="block text-black justify-between items-center p-1 font-semibold">
+                    Career
+                </a>
+                <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
+                <!-- <a
            href="./src/pages/Services.html"
            class="block text-black justify-between items-center p-1 font-semibold"
          >
@@ -221,108 +161,729 @@
          </a>
           <hr
             class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
-          />
-          <a
-            href="./src/pages/contact.html"
-            class="block text-black justify-between items-center p-1 font-semibold"
-          >
-            Contact
-          </a>
-          <hr
-            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
-          />
-          <a
-            href="./src/pages/faq.html"
-            class="block text-black justify-between items-center p-1 font-semibold"
-          >
-            Faqs
-          </a>
-          <hr
-            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
-          />
+          /> -->
+                <a href="./src/pages/contact.html" class="block text-black justify-between items-center p-1 font-semibold">
+                    Contact
+                </a>
+                <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
+               
 
-            <a id="menu-btn" class="flex text-black justify-between items-center p-1 font-semibold">
+                <!-- <a id="menu-btn" class="flex text-black justify-between items-center p-1 font-semibold">
             <p>Resource</p>
             <button onclick="toggleAccordion()" class="focus:outline-none">
               <i id="icon" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
             </button>
-          </a>
-        <hr
-            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
-          />
-        <div id="accordion-content-mobilemenu" class="hidden p-4 ">
-          <!-- Accordion content here -->
-          <div class="">
+          </a> -->
+                <a id="menu-btn" class="flex text-black justify-between items-center p-1 font-semibold">
+                    <p>Resource</p>
+                    <button class="focus:outline-none">
+                        <i id="icon" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
+                    </button>
+                </a>
+                <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
+                <div id="accordion-content-mobilemenu" class="hidden p-4 ">
+                    <!-- Accordion content here -->
+                    <div class="">
+                        <div class="flex justify-between items-center">
+                            <a href="./src/pages/blog.html" class="block py-2 text-black">- Blog</a>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="">
+                        <div class="flex justify-between items-center">
+                            <a href="./src/pages/blog.html" class="block py-2 text-black">- News</a>
+                        </div>
+                    </div>
+                    <div class=""></div>
                     <div class="flex justify-between items-center">
-                      <a href="./src/pages/blog.html" class="block py-2 text-black">- Blog</a>               
-                      </button>
-                    </div>                    
-                  </div>
-      <!-- Accordion Item 2 -->
-                  <div class="">
-                    <div class="flex justify-between items-center">
-                      <a href="./src/pages/blog.html" class="block py-2 text-black">- News</a>              
-                    </div>         
-                  </div>
-        </div>
+                        <a href="./src/pages/faq.html" class="block py-2 text-black">- Faqs</a>
+                    </div>
+                </div>
 
-         
+
+                <!--     
+            <a id="menu-btn-platform" class="flex text-black justify-between items-center p-1 font-semibold">
+            <p>Platform </p>
+            <button onclick="toggleAccordionPlatform()" class="focus:outline-none">
+              <i id="icon_platform" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
+            </button>
+          </a> -->
+
+                <a id="menu-btn-platform" class="flex text-black justify-between items-center p-1 font-semibold">
+                    <p>Platform</p>
+                    <button class="focus:outline-none">
+                        <i id="icon_platform" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
+                    </button>
+                </a>
+                <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
+                <div id="accordion-content-mobilemenu-platform" class="hidden p-4 ">
+                    <!-- Accordion content here -->
+                    <div class="">
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="block py-2 text-black">- Liveosoft Software</a>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="">
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="block py-2 text-black">- Hospitality as a Service (HaaS)</a>
+                        </div>
+                    </div>
+                    <div class=""></div>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="block py-2 text-black">- Bpm&Erp</a>
+                    </div>
+
+                </div>
+
+
+                <a href="./src/pages/lob.html" class="block text-black justify-between items-center p-1 font-semibold">
+                    Business
+                </a>
+                <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
+            </div>
+
+
+
+            <div class="flex item-center justify-center p-4">
+                <a href="#" class="inline-block bg-green-500 text-white font-bold p-4 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-opacity-75">
+                    Book a Meeting
+                </a>
+            </div>
         </div>
-        <div class="flex item-center justify-center p-4">
-          <a
-            href="#"
-            class="inline-block bg-green-500 text-white font-bold p-4 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-opacity-75"
-          >
-            Book a Meeting
-          </a>
-        </div>
-      </div>
     </header>
-     <!-- Home Page
-     <section class="relative bg-cover bg-center py-20" style="background-image: url('https://example.com/your-background-image.jpg');">
-     <section class="bg-white py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        Introduction
-        <div class="flex flex-col md:flex-row items-center  mb-16 mt-0 ">
-          <div class=" mt-4 md:mt-0 gap-96">
-            <h2 class="text-3xl font-normal text-center text-green-700 mt-10"> Live O Soft</h2>
-            <p class="text-lg text-gray-700  ">
-                 Welcome to Liveosoft, a cutting-edge livestock firm established in 2024 by visionaries Mr. X, Mr. Y, and Mr. Z. With our corporate office strategically located in Bhubaneswar, India, we are committed to revolutionising the livestock industry through innovation, technology, and sustainable practices. At Liveosoft, we bridge the gap between traditional farming methods and modern agritech solutions, ensuring that our clients receive the best livestock products backed by the latest advancements in animal husbandry.
-            </p>
-          </div>
-          <div class="w-full md:mr-8"></div>
-            <img
-              src="https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image/26bc78ff2107.jpg"
-              alt="Mission Image"
-              class="w-full h-72 rounded-lg"
-            />
-          </div>
-          
-        </div>
-        <div class="flex justify-center">
-          <button class="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-300">Read more</button>
-        </div>
-     </div>  -->
-<!-- Home Page -->
-<section class="relative h-64 sm:h-80 md:h-96 lg:h-[60vh] bg-black">
-  <!-- Slider Container -->
-  <div class="slider relative h-full w-full overflow-hidden">
-      <!-- Slider images will be injected by JS -->
-  </div>
 
-  <!-- Content Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-4 sm:px-0 z-10">
-      <h1 id="sliderTitle" class="text-4xl sm:text-5xl font-bold animate-fadeIn">Fresh Organic Food</h1>
-      <p id="sliderDescription" class="text-lg sm:text-xl mt-4 animate-fadeIn">Locally grown, eco-friendly, and healthy foods delivered to your door.</p>
-      
-      <!-- Dynamic Buttons Container -->
-      <div class="mt-12 flex space-x-4 sm:px-8 buttons-container">
-          
-      </div>
+    <!-- Home Page -->
+    <section class="relative h-96 sm:h-80 md:h-96 lg:h-[60vh] bg-black">
+        <!-- Slider Container -->
+        <div class="slider relative h-full w-full overflow-hidden">
+            <!-- Slider images will be injected by JS -->
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white px-4 sm:px-0 z-10">
+            <h1 id="sliderTitle" class="text-4xl sm:text-5xl font-bold animate-fadeIn">Fresh Organic Food</h1>
+            <p id="sliderDescription" class="text-lg sm:text-xl mt-4 animate-fadeIn">Locally grown, eco-friendly, and healthy foods delivered to your door.</p>
+
+            <!-- Dynamic Buttons Container -->
+            <div class="mt-12 flex space-x-4 sm:px-8 buttons-container">
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Digitally Transform Section -->
+    <!-- Main Section -->
+    <section class="max-w-7xl px-4 mx-auto py-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Digitally Transform Your Agriculture Businesses With <br />
+            Our One-Stop Farm Solution Platform
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+            6 Easy Steps to Implement FarmERP's Farm Business Management Software in 30 Days
+        </p>
+
+        <!-- Steps Container -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+            <!-- Step 1 -->
+            <div>
+                <div class="flex justify-center items-center mb-4">
+                    <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/phone-office.png" alt="Consultation Call" class="icon-size">
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-800">Risk-Free Consultation Call</h3>
+                <p class="text-sm text-gray-600">Determine if we’re the right fit for each other</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div>
+                <div class="flex justify-center items-center mb-4">
+                    <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/business-report.png" alt="Business Analysis" class="icon-size">
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-800">Farm Business Analysis</h3>
+                <p class="text-sm text-gray-600">Our top agri-tech experts analyze your farm business management needs</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div>
+                <div class="flex justify-center items-center mb-4">
+                    <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/laptop-settings.png" alt="Demo Experience" class="icon-size">
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-800">Personalized Demo Experience</h3>
+                <p class="text-sm text-gray-600">Obtain a tailored demo of FarmERP</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div>
+                <div class="flex justify-center items-center mb-4">
+                    <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/contract.png" alt="Proposal Submission" class="icon-size">
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-800">Proposal Submission & Onboarding</h3>
+                <p class="text-sm text-gray-600">Sign the contract and get started</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div>
+                <div class="flex justify-center items-center mb-4">
+                    <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/training.png" alt="Training" class="icon-size">
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-800">Configuration & Hands-On Training</h3>
+                <p class="text-sm text-gray-600">Our experts train you and your team over 2 weeks</p>
+            </div>
+
+            <!-- Step 6 -->
+            <div>
+                <div class="flex justify-center items-center mb-4">
+                    <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/headset.png" alt="Hypercare" class="icon-size">
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-800">Hypercare</h3>
+                <p class="text-sm text-gray-600">Consistent support throughout your implementation journey</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Sponsorship Slider Section -->
+    <div class="bg-green-300 py-16  md:px-20">
+        <div class="max-w-7xl mx-auto py-16 px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Trusted by Liveosoft <br /> Companies across the globe</h2>
+
+            <!-- Slider Container -->
+            <div class="overflow-hidden relative">
+                <div class="flex transition-transform duration-500 ease-in-out" id="sponsor-slider">
+                    <!-- 8 Sponsor Logos (Sample Images) -->
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 1" class="h-12 md:h-16"></div>
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 2" class="h-12 md:h-16"></div>
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 3" class="h-12 md:h-16"></div>
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 4" class="h-12 md:h-16"></div>
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 5" class="h-12 md:h-16"></div>
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 6" class="h-12 md:h-16"></div>
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 7" class="h-12 md:h-16"></div>
+                    <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 8" class="h-12 md:h-16"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="flex flex-col items-center my-5 px-4">
+        <h2 class="text-xl sm:text-2xl font-bold mb-6 text-center">FarmERP Successfully Deployed In 30+ Countries</h2>
+
+        <!-- Image Banner Section -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-5xl mb-10">
+            <img src="https://t3.ftcdn.net/jpg/04/32/15/18/360_F_432151892_oQ3YQDo2LYZPILlEMnlo55PjjgiUwnQb.jpg" alt="Farmer 1" class="w-full object-cover aspect-square rounded-lg shadow-lg  ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ9W15Hh_7mgF-oO3Dl_M32EWBjJUo_cA8Uw&s" alt="Farmer 2" class="w-full object-cover aspect-square rounded-lg shadow-lg">
+            <img src="https://media.istockphoto.com/id/641941258/photo/rural-women-carrying-animal-silage.jpg?s=612x612&w=0&k=20&c=0vrFBwaf0cFO1YnDtBXVl0DJ0GJ_KHIvHwpCH_QVBV0=" alt="Farmer 3" class="w-full object-cover aspect-square rounded-lg shadow-lg">
+            <img src="https://t4.ftcdn.net/jpg/06/30/06/81/360_F_630068155_RnZI6mC91wz7gUYFVmhzwpl4O6x00Cbh.jpg" alt="Farmer 4" class="w-full object-cover aspect-square rounded-lg shadow-lg">
+        </div>
+
+        <!-- Map and Title Section -->
+        <div class="relative w-full max-w-6xl text-center">
+            <!-- World Map Image -->
+            <div class="relative">
+                <img src="https://www.shutterstock.com/image-vector/high-detail-world-map-country-600nw-2408427187.jpg" alt="World Map" class="w-full aspect-[12/7] sm:aspect-video ">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- <card section -->
+    <div class="max-w-7xl mx-auto px-4 my-5">
+        <h2 class="text-2xl md:text-3xl font-bold text-green-800 text-center mb-8 md:mb-10 ">Transform your agribusiness with <br /> the best in global agriculture</h2>
+
+        <!-- Grid for cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6 py-10 text-center ">
+                <div class="bg-green-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M9 17h6v2h-6v-2zm7-5.83v-.17c0-3.2-2.58-5.8-5.78-5.8-3.2 0-5.8 2.6-5.8 5.8v.17c-1.28.53-2.22 1.82-2.22 3.33v4h16v-4c0-1.51-.94-2.8-2.2-3.33zm-5.82 4.83c-1.42 0-2.6-1.17-2.6-2.6s1.17-2.6 2.6-2.6 2.6 1.17 2.6 2.6-1.17 2.6-2.6 2.6zm2.56-9.6v-.6c0-1.42-1.16-2.58-2.58-2.58-1.42 0-2.58 1.16-2.58 2.58v.6c.94-.44 2.02-.6 3.18-.6s2.24.16 3.18.6z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold mb-2">Higher Productivity</h3>
+                <p class="text-gray-600 text-sm md:text-base">Optimize your operations and resource utilization for maximized production.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 py-10 text-center">
+                <div class="bg-blue-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
+                    <svg class="w-8 h-8 text-blue-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 7V3H4v12H0v2h12v-2H6V7h6zm12 12h-6v4h-2v-4H8v-2h16v2zm-2-12h-2V4h-2V2h4v5z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold mb-2">Increased Predictability</h3>
+                <p class="text-gray-600 text-sm md:text-base">Optimize your operations and resource utilization for maximized production.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 py-10  text-center">
+                <div class="bg-yellow-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
+                    <svg class="w-8 h-8 text-yellow-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2a10 10 0 1 1-10 10 10.011 10.011 0 0 1 10-10zm0 16.9a6.9 6.9 0 1 0-6.9-6.9 6.908 6.908 0 0 0 6.9 6.9z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold mb-2">Enhanced Profitability</h3>
+                <p class="text-gray-600 text-sm md:text-base">Streamline processes and maximize efficiency for improved profitability.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-md p-6 py-10 text-center">
+                <div class="bg-purple-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
+                    <svg class="w-8 h-8 text-purple-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20 8h-2V5h-2V3h4v5zm-3 12h-2v-2h-2v-2h6v4h-2zM6 12h4v2H6v-2zm4 6H6v-2h4v2zm-6-2h4v2H4v-2zm6 0H6v-4h4v4zm10 0v-4h-6v4h6z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg md:text-xl font-semibold mb-2">Data-Driven Insights</h3>
+                <p class="text-gray-600 text-sm md:text-base">Access comprehensive data analytics and reports to make informed decisions.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <Agriculture Business/> -->
+    <div class="container mx-auto max-w-7xl px-4 my-10">
+        <h1 class="text-3xl font-bold text-center mb-10 text-gray-700">Bring Out the Full Potential of Your Agriculture Business</h1>
+
+        <!-- First row of circles -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10 mb-8 place-items-center max-w-4xl mx-auto px-4">
+            <!-- Circle 1 -->
+            <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
+                <div class="content-wrapper flex flex-col items-center justify-center">
+                    <div class="icon-bg rounded-full p-1 mb-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
+                        </svg>
+                    </div>
+                    <p class="font-semibold text-xs">Serving in</p>
+                    <p class="font-bold text-2xl">30+</p>
+                    <p class="font-semibold text-xs">countries</p>
+                </div>
+            </div>
+
+            <!-- Circle 2 -->
+            <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
+                <div class="content-wrapper flex flex-col items-center justify-center">
+                    <div class="icon-bg rounded-full p-1 mb-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <p class="font-bold text-2xl">650+</p>
+                    <p class="font-semibold text-xs">Successful</p>
+                    <p class="font-semibold text-xs">deployments</p>
+                </div>
+            </div>
+
+            <!-- Circle 3 -->
+            <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
+                <div class="content-wrapper flex flex-col items-center justify-center">
+                    <div class="icon-bg rounded-full p-1 mb-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <p class="font-bold text-2xl">10+</p>
+                    <p class="font-semibold text-xs">Years of</p>
+                    <p class="font-semibold text-xs">Experience</p>
+                </div>
+            </div>
+
+            <!-- Circle 4 -->
+            <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
+                <div class="content-wrapper flex flex-col items-center justify-center">
+                    <div class="icon-bg rounded-full p-1 mb-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <p class="font-bold text-2xl">1000+</p>
+                    <p class="font-semibold text-xs">Farmers</p>
+                    <p class="font-semibold text-xs">Empowered</p>
+                </div>
+            </div>
+
+            <!-- Circle 5 -->
+            <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
+                <div class="content-wrapper flex flex-col items-center justify-center">
+                    <div class="icon-bg rounded-full p-1 mb-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <p class="font-bold text-2xl">500+</p>
+                    <p class="font-semibold text-xs">Innovative</p>
+                    <p class="font-semibold text-xs">Solutions</p>
+                </div>
+            </div>
+
+            <!-- Circle 6 -->
+            <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
+                <div class="content-wrapper flex flex-col items-center justify-center">
+                    <div class="icon-bg rounded-full p-1 mb-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <p class="font-bold text-2xl">20+</p>
+                    <p class="font-semibold text-xs">Awards</p>
+                    <p class="font-semibold text-xs">Received</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <Agri tech excellence -->
+    <section class="bg-white sm:py-5">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Tabs Navigation -->
+            <div class="flex flex-nowrap justify-left items-center mb-10 space-x-4 overflow-x-auto">
+                <button onclick="showTab(1)" class="tab-btn px-6 py-3 bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
+                    Farm Operations Management
+                </button>
+                <button onclick="showTab(2)" class="tab-btn px-6 py-3  bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
+                    Financial Management
+                </button>
+                <button onclick="showTab(3)" class="tab-btn px-6 py-3 bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
+                    Warehouse & Processing Management
+                </button>
+                <button onclick="showTab(4)" class="tab-btn px-6 py-3 bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
+                    Labour Management
+                </button>
+            </div>
+
+            <!-- Tabs Content -->
+            <div id="tab-1" class="tab-content flex flex-col md:flex-row mb-10">
+                <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                    <div class="relative w-full h-[300px] lg:h-[400px]"> <!-- Fixed height for all tabs -->
+                        <img src="https://images.pexels.com/photos/2446695/pexels-photo-2446695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Farm Operations" class="h-full w-full object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Farm Operations Management</h2>
+                    <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
+                        Oversees farm infrastructure mapping, activity planning, consumption recording, plan vs actual tracking, labor management, and activities up to harvest.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="tab-2" class="tab-content flex flex-col md:flex-row mb-10">
+                <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                    <div class="relative w-full h-[300px] lg:h-[400px]">
+                        <img src="https://images.pexels.com/photos/7063762/pexels-photo-7063762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Financial Management" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Financial Management</h2>
+                    <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
+                        A full-fledged accounting system caters every aspect of agribusiness operations and ensures comprehensive finance management.
+                    </p>
+                </div>
+            </div>
+
+            <div id="tab-3" class="tab-content flex flex-col md:flex-row mb-10">
+                <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                    <div class="relative w-full h-[300px] lg:h-[400px]">
+                        <img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Warehouse Management" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Warehouse & Processing Management</h2>
+                    <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
+                        Handles complete post-harvest management activities, ensuring quality checks at each stage. Manages inventory of both finished goods and raw products.
+                    </p>
+                </div>
+            </div>
+
+            <div id="tab-4" class="tab-content flex flex-col md:flex-row mb-10">
+                <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                    <div class="relative w-full h-[300px] lg:h-[400px]"> <!-- Fixed height and width here -->
+                        <img src="https://images.pexels.com/photos/5711880/pexels-photo-5711880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Labour Management" class="w-full h-full object-cover rounded-lg shadow-lg" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Labour Management</h2>
+                    <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
+                        Track labor by plot, record attendance & manage payroll. Simplify agribusiness workforce management.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- <integration capabilities /> -->
+
+    <section class="max-w-7xl mx-auto px-4 py-12 gap-10 flex flex-col lg:flex-row items-center justify-between">
+        <!-- Left Side - Image -->
+        <div class="w-full lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0">
+            <img src="https://media.istockphoto.com/id/507008797/photo/photo-chicken.jpg?s=612x612&w=0&k=20&c=noiRcMR-wJTffn5m7BbYb6huh7KYm6iyYGCwGMekSko=" alt="Image" class=" w-full shadow-lg h-72 md:h-80 lg:h-96  rounded-md">
+        </div>
+
+        <!-- Right Side - Integration Capabilities -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">
+                Focus of Ease-Of-Use: <br> Integration Capabilities
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 mb-6">
+                FarmERP interfaces to a growing number of legacy systems and smart devices to provide a single sign-on capability.
+            </p>
+
+            <!-- Partner Logos -->
+            <div class="flex flex-wrap justify-center lg:justify-start items-center space-x-4 mb-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU97PO01iB618bXIy89J3eUHMGUghK8zMfgw&s" alt="SAP" class="w-20 md:w-28">
+                <img src="https://mma.prnewswire.com/media/565528/o_redbadge_digital_master.jpg?p=facebook" alt="Oracle" class="w-20 md:w-28">
+                <img src="https://sisbrazil.wordpress.com/wp-content/uploads/2018/05/27658466_1736212183098018_84025685_n-copia-copia.jpg" alt="Netsis" class="w-16 md:w-20">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196571.png" alt="Sage" class="w-16 md:w-24">
+                <img src="https://media.licdn.com/dms/image/C4D12AQG4aJ0bLXnlKQ/article-cover_image-shrink_600_2000/0/1520228212660?e=2147483647&v=beta&t=f1vTOoHWKUMpqyC0hWWM_oSHmwFch6YqShaMp43BqBM" alt="Microsoft Dynamics" class="w-16 md:w-24">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-green-300 py-16 px-4 md:px-20">
+        <!-- Container to hold the two sections -->
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+            <!-- Left Section: Features with icons and text -->
+            <div>
+                <h2 class="text-gray-800 text-2xl md:text-3xl font-bold mb-4">
+                    Access from your <span class="text-blue-700">MOBILE</span> device
+                </h2>
+                <p class="text-gray-600 mb-8 text-base md:text-lg">
+                    Native app – works without internet connectivity
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="flex items-center">
+                        <div class="bg-blue-200 p-2 rounded-full">
+                            <svg class="h-6 w-6 text-blue-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM12 14c-4.41 0-8 3.59-8 8h2c0-3.31 2.69-6 6-6s6 2.69 6 6h2c0-4.41-3.59-8-8-8z" />
+                            </svg>
+                        </div>
+                        <p class="ml-4 text-gray-700 font-medium">Farm Profile</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="flex items-center">
+                        <div class="bg-purple-200 p-2 rounded-full">
+                            <svg class="h-6 w-6 text-purple-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M5 3v18h4v-8h6v8h4V3H5zm7 10H9v6h6v-6h-3z" />
+                            </svg>
+                        </div>
+                        <p class="ml-4 text-gray-700 font-medium">Contract Farming</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="flex items-center">
+                        <div class="bg-blue-200 p-2 rounded-full">
+                            <svg class="h-6 w-6 text-blue-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM12 14c-4.41 0-8 3.59-8 8h2c0-3.31 2.69-6 6-6s6 2.69 6 6h2c0-4.41-3.59-8-8-8z" />
+                            </svg>
+                        </div>
+                        <p class="ml-4 text-gray-700 font-medium">Inventory</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="flex items-center">
+                        <div class="bg-purple-200 p-2 rounded-full">
+                            <svg class="h-6 w-6 text-purple-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M5 3v18h4v-8h6v8h4V3H5zm7 10H9v6h6v-6h-3z" />
+                            </svg>
+                        </div>
+                        <p class="ml-4 text-gray-700 font-medium">Production</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="flex items-center">
+                        <div class="bg-blue-200 p-2 rounded-full">
+                            <svg class="h-6 w-6 text-blue-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM12 14c-4.41 0-8 3.59-8 8h2c0-3.31 2.69-6 6-6s6 2.69 6 6h2c0-4.41-3.59-8-8-8z" />
+                            </svg>
+                        </div>
+                        <p class="ml-4 text-gray-700 font-medium">Human Resource</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="flex items-center">
+                        <div class="bg-purple-200 p-2 rounded-full">
+                            <svg class="h-6 w-6 text-purple-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M5 3v18h4v-8h6v8h4V3H5zm7 10H9v6h6v-6h-3z" />
+                            </svg>
+                        </div>
+                        <p class="ml-4 text-gray-700 font-medium">Planning Module</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section: Mobile app screenshots -->
+            <div class="relative flex justify-center gap-4 md:gap-10 flex-wrap">
+                <!-- 3 mobile mockups -->
+                <img src="https://t4.ftcdn.net/jpg/09/75/49/09/360_F_975490950_t6OMsZCIxMSQhm8ivlrssSPg4TXHdVjc.jpg" alt="Mobile app 1" class="w-full h-96  rounded-2xl object-cover ">
+            </div>
+        </div>
+
+        <!-- Bottom CTA Section
+  <div class="text-center mt-8">
+      <a href="#" class="bg-yellow-400 text-white py-3 px-6 rounded-lg font-bold hover:bg-yellow-500 transition">
+          Request a Risk-Free Consultation!
+      </a>
+  </div> -->
+    </section>
+
+
+
+
+
+    <!-- Footer  -->
+    <!-- Send Us a Message Form Section -->
+
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-10">
+            <h2 class="text-4xl font-bold text-green-600 text-center mb-8">
+                Send Us a Message
+            </h2>
+            <form class="w-full px-4">
+                <!-- First Name, Phone Number, Email -->
+                <div class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <input class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" type="text" placeholder="Enter Your Name" required />
+                    </div>
+                    <div>
+                        <input class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" type="number" placeholder="Phone Number" required />
+                    </div>
+                    <div>
+                        <input class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" type="email" placeholder="Your Email" required />
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-6">
+                    <textarea class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400" rows="2" placeholder="Your Message" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button class="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gradient-to-r from-green-700 to-green-950 text-white">
+        <!-- Optional Call-to-Action Section (commented out) -->
+        <!-- 
+<div class="container mx-auto max-w-7xl px-4">
+  <h1 class="text-4xl font-bold mb-6 text-center text-yellow-400">Do you want to work with Organic Farm?</h1>
+  <p class="mb-10 text-center text-gray-300">Arctic char, steelhead sprat sea lamprey grunion. Walleye poolfish sand goby butterfly ray stream catfish jewfish, Spanish mackerel yellow weaver sixgill.</p>
+  <div class="text-center">
+      <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">Get a Quote</button>
   </div>
-  
-</section>
+</div>
+-->
+
+        <div class="container mx-auto py-20 flex flex-col md:flex-row justify-between space-y-2 md:space-y-0 md:space-x-8 px-4 max-w-7xl">
+            <!-- Left Column: Logo and Social Media -->
+            <div class="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
+                <img src=/src/assets/Images/HomePage/Hero/logo.png" alt="Organic Farm logo" class="w-60 h-30 mb-2" />
+                <p class="text-sm font-bold text-yellow-400 mb-2">ESTD 1956</p>
+                <h2 class="text-2xl font-bold mb-4 text-white">Organic Farm</h2>
+                <p class="text-white mb-6">
+                    Wrasse climbing gourami amur pike Arctic char, steelhead sprat sea
+                    lamprey grunion.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-white hover:text-yellow-400 transition duration-300"><i class="fab fa-x-twitter fa-lg"></i></a>
+                    <a href="#" class="text-white hover:text-yellow-400 transition duration-300"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#" class="text-white hover:text-yellow-400 transition duration-300"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="#" class="text-white hover:text-yellow-400 transition duration-300"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+
+            <!-- Middle Column: Main Menu -->
+            <div class="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
+                <h2 class="text-2xl font-bold mb-6 text-white">Main Menu</h2>
+                <ul class="list-none space-y-2 text-white">
+                    <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
+                        <a href="./src/pages/about.html">About Us</a>
+                    </li>
+                    <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
+                        <a href="./src/pages/Services.html">Services</a>
+                    </li>
+                    <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
+                        <a href="./src/pages/ourProjects.html">Our Projects</a>
+                    </li>
+                    <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
+                        <a href="./src/pages/farmers.html">Meet Farmers</a>
+                    </li>
+                    <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
+                        <a href="./src/pages/news.html">Latest News</a>
+                    </li>
+                    <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
+                        <a href="./src/pages/career.html">Careers</a>
+                    </li>
+                    <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
+                        <a href="./src/pages/contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Contact Info -->
+            <div class="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left">
+                <h2 class="text-2xl font-bold mb-6 text-white">Contact Info</h2>
+                <p class="mb-2 text-white">523 Sylvan Ave, 5th Floor Mountain</p>
+                <p class="mb-2 text-white">View, CA 94041 USA</p>
+                <p class="mb-2 text-white">+1 234 719 8948</p>
+                <p class="mb-2 text-white">+1 987 654 3210</p>
+                <p class="mb-2 text-white">support@ag px-4 rarium.com</p>
+            </div>
+        </div>
+        <div class="mx-auto px-4 max-w-7xl w-full">
+            <hr />
+        </div>
+        <!-- Flexbox for aligning copyright and privacy policy on the same line -->
+        <div class="container mx-auto max-w-7xl p-4 flex justify-between items-center gap-4">
+            <p class="text-sm text-white">© 2024 Organic Farm. All Rights Reserved</p>
+            <a href="./src/pages/Privacypolicy.html">
+                <p class="text-sm text-white">Privacy Policy | Terms and Conditions</p>
+            </a>
+        </div>
+    </footer>
+
 <script>
+
 document.addEventListener('DOMContentLoaded', function() {
     const slidesData = [
         {
@@ -388,703 +949,7 @@ document.addEventListener('DOMContentLoaded', function() {
     renderSlide();
     setInterval(showNextSlide, 3000); // Change slide every 3 seconds
 });
-</script>
 
-       <!-- Digitally Transform Section -->
-<!-- Main Section -->
-<section class="max-w-7xl px-4 mx-auto py-12 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-    Digitally Transform Your Agriculture Businesses With <br/>
-    Our One-Stop Farm Solution Platform
-  </h2>
-  <p class="text-lg text-gray-600 mb-8">
-    6 Easy Steps to Implement FarmERP's Farm Business Management Software in 30 Days
-  </p>
-
-  <!-- Steps Container -->
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-
-    <!-- Step 1 -->
-    <div>
-      <div class="flex justify-center items-center mb-4">
-        <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/phone-office.png" alt="Consultation Call" class="icon-size">
-        </div>
-      </div>
-      <h3 class="text-lg font-semibold mb-2 text-gray-800">Risk-Free Consultation Call</h3>
-      <p class="text-sm text-gray-600">Determine if we’re the right fit for each other</p>
-    </div>
-
-    <!-- Step 2 -->
-    <div>
-      <div class="flex justify-center items-center mb-4">
-        <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/business-report.png" alt="Business Analysis" class="icon-size">
-        </div>
-      </div>
-      <h3 class="text-lg font-semibold mb-2 text-gray-800">Farm Business Analysis</h3>
-      <p class="text-sm text-gray-600">Our top agri-tech experts analyze your farm business management needs</p>
-    </div>
-
-    <!-- Step 3 -->
-    <div>
-      <div class="flex justify-center items-center mb-4">
-        <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/laptop-settings.png" alt="Demo Experience" class="icon-size">
-        </div>
-      </div>
-      <h3 class="text-lg font-semibold mb-2 text-gray-800">Personalized Demo Experience</h3>
-      <p class="text-sm text-gray-600">Obtain a tailored demo of FarmERP</p>
-    </div>
-
-    <!-- Step 4 -->
-    <div>
-      <div class="flex justify-center items-center mb-4">
-        <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/contract.png" alt="Proposal Submission" class="icon-size">
-        </div>
-      </div>
-      <h3 class="text-lg font-semibold mb-2 text-gray-800">Proposal Submission & Onboarding</h3>
-      <p class="text-sm text-gray-600">Sign the contract and get started</p>
-    </div>
-
-    <!-- Step 5 -->
-    <div>
-      <div class="flex justify-center items-center mb-4">
-        <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/training.png" alt="Training" class="icon-size">
-        </div>
-      </div>
-      <h3 class="text-lg font-semibold mb-2 text-gray-800">Configuration & Hands-On Training</h3>
-      <p class="text-sm text-gray-600">Our experts train you and your team over 2 weeks</p>
-    </div>
-
-    <!-- Step 6 -->
-    <div>
-      <div class="flex justify-center items-center mb-4">
-        <div class="w-20 h-20 bg-green-500 text-white flex justify-center items-center rounded-full">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/headset.png" alt="Hypercare" class="icon-size">
-        </div>
-      </div>
-      <h3 class="text-lg font-semibold mb-2 text-gray-800">Hypercare</h3>
-      <p class="text-sm text-gray-600">Consistent support throughout your implementation journey</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-        
-     <!-- Sponsorship Slider Section -->
-<div class="bg-green-300 py-16  md:px-20">
-  <div class="max-w-7xl mx-auto py-16 px-4">
-    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Trusted by Liveosoft <br/> Companies across the globe</h2>
-    
-    <!-- Slider Container -->
-    <div class="overflow-hidden relative">
-      <div class="flex transition-transform duration-500 ease-in-out" id="sponsor-slider">
-        <!-- 8 Sponsor Logos (Sample Images) -->
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 1" class="h-12 md:h-16"></div>
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 2" class="h-12 md:h-16"></div>
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 3" class="h-12 md:h-16"></div>
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 4" class="h-12 md:h-16"></div>
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 5" class="h-12 md:h-16"></div>
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 6" class="h-12 md:h-16"></div>
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 7" class="h-12 md:h-16"></div>
-        <div class="flex-none flex justify-center items-center p-4 w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/6"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoYyOr5rRyHGl4RRp7KiKK34FFI_4kF4sig&s" alt="Sponsor 8" class="h-12 md:h-16"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-<section class="flex flex-col items-center my-5 px-4">
-  <h2 class="text-xl sm:text-2xl font-bold mb-6 text-center">FarmERP Successfully Deployed In 30+ Countries</h2>
-  
-  <!-- Image Banner Section -->
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-5xl mb-10">
-      <img src="https://t3.ftcdn.net/jpg/04/32/15/18/360_F_432151892_oQ3YQDo2LYZPILlEMnlo55PjjgiUwnQb.jpg" alt="Farmer 1" class="w-full object-cover aspect-square rounded-lg shadow-lg  ">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ9W15Hh_7mgF-oO3Dl_M32EWBjJUo_cA8Uw&s" alt="Farmer 2" class="w-full object-cover aspect-square rounded-lg shadow-lg">
-      <img src="https://media.istockphoto.com/id/641941258/photo/rural-women-carrying-animal-silage.jpg?s=612x612&w=0&k=20&c=0vrFBwaf0cFO1YnDtBXVl0DJ0GJ_KHIvHwpCH_QVBV0=" alt="Farmer 3" class="w-full object-cover aspect-square rounded-lg shadow-lg">
-      <img src="https://t4.ftcdn.net/jpg/06/30/06/81/360_F_630068155_RnZI6mC91wz7gUYFVmhzwpl4O6x00Cbh.jpg" alt="Farmer 4" class="w-full object-cover aspect-square rounded-lg shadow-lg">
-  </div>
-
-  <!-- Map and Title Section -->
-  <div class="relative w-full max-w-6xl text-center">
-      <!-- World Map Image -->
-      <div class="relative">
-          <img src="https://www.shutterstock.com/image-vector/high-detail-world-map-country-600nw-2408427187.jpg" alt="World Map" class="w-full aspect-[12/7] sm:aspect-video ">
-      </div>
-  </div>
-</section>
-
-
-
-    
-    
-    <!-- <card section -->
-      <div class="max-w-7xl mx-auto px-4 my-5">
-        <h2 class="text-2xl md:text-3xl font-bold text-green-800 text-center mb-8 md:mb-10 ">Transform your agribusiness with <br/> the best in global agriculture</h2>
-        
-        <!-- Grid for cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-          <!-- Card 1 -->
-          <div class="bg-white rounded-lg shadow-md p-6 py-10 text-center ">
-            <div class="bg-green-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
-              <svg class="w-8 h-8 text-green-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M9 17h6v2h-6v-2zm7-5.83v-.17c0-3.2-2.58-5.8-5.78-5.8-3.2 0-5.8 2.6-5.8 5.8v.17c-1.28.53-2.22 1.82-2.22 3.33v4h16v-4c0-1.51-.94-2.8-2.2-3.33zm-5.82 4.83c-1.42 0-2.6-1.17-2.6-2.6s1.17-2.6 2.6-2.6 2.6 1.17 2.6 2.6-1.17 2.6-2.6 2.6zm2.56-9.6v-.6c0-1.42-1.16-2.58-2.58-2.58-1.42 0-2.58 1.16-2.58 2.58v.6c.94-.44 2.02-.6 3.18-.6s2.24.16 3.18.6z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg md:text-xl font-semibold mb-2">Higher Productivity</h3>
-            <p class="text-gray-600 text-sm md:text-base">Optimize your operations and resource utilization for maximized production.</p>
-          </div>
-      
-          <!-- Card 2 -->
-          <div class="bg-white rounded-lg shadow-md p-6 py-10 text-center">
-            <div class="bg-blue-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
-              <svg class="w-8 h-8 text-blue-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 7V3H4v12H0v2h12v-2H6V7h6zm12 12h-6v4h-2v-4H8v-2h16v2zm-2-12h-2V4h-2V2h4v5z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg md:text-xl font-semibold mb-2">Increased Predictability</h3>
-            <p class="text-gray-600 text-sm md:text-base">Optimize your operations and resource utilization for maximized production.</p>
-          </div>
-      
-          <!-- Card 3 -->
-          <div class="bg-white rounded-lg shadow-md p-6 py-10  text-center">
-            <div class="bg-yellow-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
-              <svg class="w-8 h-8 text-yellow-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2a10 10 0 1 1-10 10 10.011 10.011 0 0 1 10-10zm0 16.9a6.9 6.9 0 1 0-6.9-6.9 6.908 6.908 0 0 0 6.9 6.9z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg md:text-xl font-semibold mb-2">Enhanced Profitability</h3>
-            <p class="text-gray-600 text-sm md:text-base">Streamline processes and maximize efficiency for improved profitability.</p>
-          </div>
-      
-          <!-- Card 4 -->
-          <div class="bg-white rounded-lg shadow-md p-6 py-10 text-center">
-            <div class="bg-purple-100 w-16 h-16 mx-auto flex items-center justify-center rounded-full mb-4">
-              <svg class="w-8 h-8 text-purple-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M20 8h-2V5h-2V3h4v5zm-3 12h-2v-2h-2v-2h6v4h-2zM6 12h4v2H6v-2zm4 6H6v-2h4v2zm-6-2h4v2H4v-2zm6 0H6v-4h4v4zm10 0v-4h-6v4h6z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg md:text-xl font-semibold mb-2">Data-Driven Insights</h3>
-            <p class="text-gray-600 text-sm md:text-base">Access comprehensive data analytics and reports to make informed decisions.</p>
-          </div>
-      
-        </div>
-      </div>
-      
-
-<!-- <Agriculture Business/> -->
-<div class="container mx-auto max-w-7xl px-4 my-10">
-  <h1 class="text-3xl font-bold text-center mb-10 text-gray-700">Bring Out the Full Potential of Your Agriculture Business</h1>
-
-  <!-- First row of circles -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10 mb-8 place-items-center max-w-4xl mx-auto px-4">
-      <!-- Circle 1 -->
-      <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
-          <div class="content-wrapper flex flex-col items-center justify-center">
-              <div class="icon-bg rounded-full p-1 mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-                  </svg>
-              </div>
-              <p class="font-semibold text-xs">Serving in</p>
-              <p class="font-bold text-2xl">30+</p>
-              <p class="font-semibold text-xs">countries</p>
-          </div>
-      </div>
-
-      <!-- Circle 2 -->
-      <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
-          <div class="content-wrapper flex flex-col items-center justify-center">
-              <div class="icon-bg rounded-full p-1 mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-              </div>
-              <p class="font-bold text-2xl">650+</p>
-              <p class="font-semibold text-xs">Successful</p>
-              <p class="font-semibold text-xs">deployments</p>
-          </div>
-      </div>
-
-      <!-- Circle 3 -->
-      <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
-          <div class="content-wrapper flex flex-col items-center justify-center">
-              <div class="icon-bg rounded-full p-1 mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-              </div>
-              <p class="font-bold text-2xl">10+</p>
-              <p class="font-semibold text-xs">Years of</p>
-              <p class="font-semibold text-xs">Experience</p>
-          </div>
-      </div>
-
-      <!-- Circle 4 -->
-      <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
-          <div class="content-wrapper flex flex-col items-center justify-center">
-              <div class="icon-bg rounded-full p-1 mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-              </div>
-              <p class="font-bold text-2xl">1000+</p>
-              <p class="font-semibold text-xs">Farmers</p>
-              <p class="font-semibold text-xs">Empowered</p>
-          </div>
-      </div>
-
-      <!-- Circle 5 -->
-      <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
-          <div class="content-wrapper flex flex-col items-center justify-center">
-              <div class="icon-bg rounded-full p-1 mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-              </div>
-              <p class="font-bold text-2xl">500+</p>
-              <p class="font-semibold text-xs">Innovative</p>
-              <p class="font-semibold text-xs">Solutions</p>
-          </div>
-      </div>
-
-      <!-- Circle 6 -->
-      <div class="circle gradient-bg p-2 flex items-center justify-center text-white text-center h-25 w-25 rounded-full">
-          <div class="content-wrapper flex flex-col items-center justify-center">
-              <div class="icon-bg rounded-full p-1 mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-9a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-              </div>
-              <p class="font-bold text-2xl">20+</p>
-              <p class="font-semibold text-xs">Awards</p>
-              <p class="font-semibold text-xs">Received</p>
-          </div>
-      </div>
-  </div>
-</div>
-
-      
-    <!-- <Agri tech excellence -->
-      <section class="bg-white sm:py-5">
-        <div class="max-w-7xl mx-auto px-4">
-            <!-- Tabs Navigation -->
-            <div class="flex flex-nowrap justify-left items-center mb-10 space-x-4 overflow-x-auto">
-              <button onclick="showTab(1)" class="tab-btn px-6 py-3 bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
-                Farm Operations Management
-              </button>
-              <button onclick="showTab(2)" class="tab-btn px-6 py-3  bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
-                Financial Management
-              </button>
-              <button onclick="showTab(3)" class="tab-btn px-6 py-3 bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
-                Warehouse & Processing Management
-              </button>
-              <button onclick="showTab(4)" class="tab-btn px-6 py-3 bg-white text-green-700 border border-green-700 rounded-lg hover:bg-green-600 hover:text-white transition focus:outline-none flex justify-center items-center text-center flex-shrink-0">
-                Labour Management
-              </button>
-            </div>
-    
-            <!-- Tabs Content -->
-              <div id="tab-1" class="tab-content flex flex-col md:flex-row mb-10">
-              <div class="w-full md:w-1/2 mb-4 md:mb-0">
-                <div class="relative w-full h-[300px] lg:h-[400px]"> <!-- Fixed height for all tabs -->
-                  <img
-                    src="https://images.pexels.com/photos/2446695/pexels-photo-2446695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Farm Operations"
-                    class="h-full w-full object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-              <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Farm Operations Management</h2>
-                <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
-                Oversees farm infrastructure mapping, activity planning, consumption recording, plan vs actual tracking, labor management, and activities up to harvest.
-                </p>
-              </div>
-            </div>
-    
-    
-            <div id="tab-2" class="tab-content flex flex-col md:flex-row mb-10">
-              <div class="w-full md:w-1/2 mb-4 md:mb-0">
-              <div class="relative w-full h-[300px] lg:h-[400px]">
-                  <img
-                    src="https://images.pexels.com/photos/7063762/pexels-photo-7063762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Financial Management"
-                    class="w-full h-full object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-              <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Financial Management</h2>
-                <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
-                A full-fledged accounting system caters every aspect of agribusiness operations and ensures comprehensive finance management.
-                </p>
-              </div>
-            </div>
-    
-            <div id="tab-3" class="tab-content flex flex-col md:flex-row mb-10">
-              <div class="w-full md:w-1/2 mb-4 md:mb-0">
-              <div class="relative w-full h-[300px] lg:h-[400px]">
-                  <img
-                    src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Warehouse Management"
-                    class="w-full h-full object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-              </div>
-              <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Warehouse & Processing Management</h2>
-                <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
-                Handles complete post-harvest management activities, ensuring quality checks at each stage. Manages inventory of both finished goods and raw products.
-                </p>
-              </div>
-            </div>
-    
-          <div id="tab-4" class="tab-content flex flex-col md:flex-row mb-10">
-          <div class="w-full md:w-1/2 mb-4 md:mb-0">
-        <div class="relative w-full h-[300px] lg:h-[400px]"> <!-- Fixed height and width here -->
-              <img
-                src="https://images.pexels.com/photos/5711880/pexels-photo-5711880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Labour Management"
-                class="w-full h-full object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-0 md:p-6 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 md:mb-4">Labour Management</h2>
-            <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-2 md:mb-4">
-            Track labor by plot, record attendance & manage payroll. Simplify agribusiness workforce management.
-            </p>
-          </div>
-        </div>
-    
-          </div>
-        </section>
-
-
- 
-    
-
-<!-- <integration capabilities /> -->
-
-<section class="max-w-7xl mx-auto px-4 py-12 gap-10 flex flex-col lg:flex-row items-center justify-between">
-  <!-- Left Side - Image -->
-  <div class="w-full lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0">
-      <img src="https://media.istockphoto.com/id/507008797/photo/photo-chicken.jpg?s=612x612&w=0&k=20&c=noiRcMR-wJTffn5m7BbYb6huh7KYm6iyYGCwGMekSko=" alt="Image" class=" w-full shadow-lg h-72 md:h-80 lg:h-96  rounded-md">
-  </div>
-
-  <!-- Right Side - Integration Capabilities -->
-  <div class="w-full lg:w-1/2 text-center lg:text-left">
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4">
-          Focus of Ease-Of-Use: <br> Integration Capabilities
-      </h2>
-      <p class="text-base md:text-lg text-gray-600 mb-6">
-          FarmERP interfaces to a growing number of legacy systems and smart devices to provide a single sign-on capability.
-      </p>
-
-      <!-- Partner Logos -->
-      <div class="flex flex-wrap justify-center lg:justify-start items-center space-x-4 mb-6">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU97PO01iB618bXIy89J3eUHMGUghK8zMfgw&s" alt="SAP" class="w-20 md:w-28">
-          <img src="https://mma.prnewswire.com/media/565528/o_redbadge_digital_master.jpg?p=facebook" alt="Oracle" class="w-20 md:w-28">
-          <img src="https://sisbrazil.wordpress.com/wp-content/uploads/2018/05/27658466_1736212183098018_84025685_n-copia-copia.jpg" alt="Netsis" class="w-16 md:w-20">
-          <img src="https://cdn-icons-png.flaticon.com/512/196/196571.png" alt="Sage" class="w-16 md:w-24">
-          <img src="https://media.licdn.com/dms/image/C4D12AQG4aJ0bLXnlKQ/article-cover_image-shrink_600_2000/0/1520228212660?e=2147483647&v=beta&t=f1vTOoHWKUMpqyC0hWWM_oSHmwFch6YqShaMp43BqBM" alt="Microsoft Dynamics" class="w-16 md:w-24">
-      </div>
-  </div>
-</section>
-
-
-<section class="bg-green-300 py-16 px-4 md:px-20">
-  <!-- Container to hold the two sections -->
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-      
-      <!-- Left Section: Features with icons and text -->
-      <div>
-          <h2 class="text-gray-800 text-2xl md:text-3xl font-bold mb-4">
-              Access from your <span class="text-blue-700">MOBILE</span> device
-          </h2>
-          <p class="text-gray-600 mb-8 text-base md:text-lg">
-              Native app – works without internet connectivity
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <!-- Feature 1 -->
-              <div class="flex items-center">
-                  <div class="bg-blue-200 p-2 rounded-full">
-                      <svg class="h-6 w-6 text-blue-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM12 14c-4.41 0-8 3.59-8 8h2c0-3.31 2.69-6 6-6s6 2.69 6 6h2c0-4.41-3.59-8-8-8z"/>
-                      </svg>
-                  </div>
-                  <p class="ml-4 text-gray-700 font-medium">Farm Profile</p>
-              </div>
-              
-              <!-- Feature 2 -->
-              <div class="flex items-center">
-                  <div class="bg-purple-200 p-2 rounded-full">
-                      <svg class="h-6 w-6 text-purple-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M5 3v18h4v-8h6v8h4V3H5zm7 10H9v6h6v-6h-3z"/>
-                      </svg>
-                  </div>
-                  <p class="ml-4 text-gray-700 font-medium">Contract Farming</p>
-              </div>
-              
-              <!-- Feature 3 -->
-              <div class="flex items-center">
-                  <div class="bg-blue-200 p-2 rounded-full">
-                      <svg class="h-6 w-6 text-blue-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM12 14c-4.41 0-8 3.59-8 8h2c0-3.31 2.69-6 6-6s6 2.69 6 6h2c0-4.41-3.59-8-8-8z"/>
-                      </svg>
-                  </div>
-                  <p class="ml-4 text-gray-700 font-medium">Inventory</p>
-              </div>
-              
-              <!-- Feature 4 -->
-              <div class="flex items-center">
-                  <div class="bg-purple-200 p-2 rounded-full">
-                      <svg class="h-6 w-6 text-purple-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M5 3v18h4v-8h6v8h4V3H5zm7 10H9v6h6v-6h-3z"/>
-                      </svg>
-                  </div>
-                  <p class="ml-4 text-gray-700 font-medium">Production</p>
-              </div>
-              
-              <!-- Feature 5 -->
-              <div class="flex items-center">
-                  <div class="bg-blue-200 p-2 rounded-full">
-                      <svg class="h-6 w-6 text-blue-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM12 14c-4.41 0-8 3.59-8 8h2c0-3.31 2.69-6 6-6s6 2.69 6 6h2c0-4.41-3.59-8-8-8z"/>
-                      </svg>
-                  </div>
-                  <p class="ml-4 text-gray-700 font-medium">Human Resource</p>
-              </div>
-              
-              <!-- Feature 6 -->
-              <div class="flex items-center">
-                  <div class="bg-purple-200 p-2 rounded-full">
-                      <svg class="h-6 w-6 text-purple-600" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M5 3v18h4v-8h6v8h4V3H5zm7 10H9v6h6v-6h-3z"/>
-                      </svg>
-                  </div>
-                  <p class="ml-4 text-gray-700 font-medium">Planning Module</p>
-              </div>
-          </div>
-      </div>
-  
-      <!-- Right Section: Mobile app screenshots -->
-      <div class="relative flex justify-center gap-4 md:gap-10 flex-wrap">
-          <!-- 3 mobile mockups -->
-          <img src="https://t4.ftcdn.net/jpg/09/75/49/09/360_F_975490950_t6OMsZCIxMSQhm8ivlrssSPg4TXHdVjc.jpg" alt="Mobile app 1" class="w-full h-96  rounded-2xl object-cover ">
-      </div>
-  </div>
-  
-  <!-- Bottom CTA Section
-  <div class="text-center mt-8">
-      <a href="#" class="bg-yellow-400 text-white py-3 px-6 rounded-lg font-bold hover:bg-yellow-500 transition">
-          Request a Risk-Free Consultation!
-      </a>
-  </div> -->
-</section>
-
-    
-  
-  
-  
-
-    
-        
-    
-
-<!-- Footer  -->
- <!-- Send Us a Message Form Section -->
-
-<div class="bg-white">
-  <div class="max-w-7xl mx-auto py-10">
-    <h2 class="text-4xl font-bold text-green-600 text-center mb-8">
-      Send Us a Message
-    </h2>
-    <form class="w-full px-4">
-      <!-- First Name, Phone Number, Email -->
-      <div class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <input
-            class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            type="text"
-            placeholder="Enter Your Name"
-            required
-          />
-        </div>
-        <div>
-          <input
-            class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            type="number"
-            placeholder="Phone Number"
-            required
-          />
-        </div>
-        <div>
-          <input
-            class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            type="email"
-            placeholder="Your Email"
-            required
-          />
-        </div>
-      </div>
-
-      <!-- Message -->
-      <div class="mb-6">
-        <textarea
-          class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-          rows="2"
-          placeholder="Your Message"
-          required
-        ></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="text-center">
-        <button
-          class="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105"
-        >
-          Send Message
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<footer class="bg-gradient-to-r from-green-700 to-green-950 text-white">
-  <!-- Optional Call-to-Action Section (commented out) -->
-  <!-- 
-<div class="container mx-auto max-w-7xl px-4">
-  <h1 class="text-4xl font-bold mb-6 text-center text-yellow-400">Do you want to work with Organic Farm?</h1>
-  <p class="mb-10 text-center text-gray-300">Arctic char, steelhead sprat sea lamprey grunion. Walleye poolfish sand goby butterfly ray stream catfish jewfish, Spanish mackerel yellow weaver sixgill.</p>
-  <div class="text-center">
-      <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">Get a Quote</button>
-  </div>
-</div>
--->
-
-  <div
-    class="container mx-auto py-20 flex flex-col md:flex-row justify-between space-y-2 md:space-y-0 md:space-x-8 px-4 max-w-7xl"
-  >
-    <!-- Left Column: Logo and Social Media -->
-    <div
-      class="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left"
-    >
-      <img
-        src=/src/assets/Images/HomePage/Hero/logo.png"
-        alt="Organic Farm logo"
-        class="w-60 h-30 mb-2"
-      />
-      <p class="text-sm font-bold text-yellow-400 mb-2">ESTD 1956</p>
-      <h2 class="text-2xl font-bold mb-4 text-white">Organic Farm</h2>
-      <p class="text-white mb-6">
-        Wrasse climbing gourami amur pike Arctic char, steelhead sprat sea
-        lamprey grunion.
-      </p>
-      <div class="flex justify-center md:justify-start space-x-4">
-        <a
-          href="#"
-          class="text-white hover:text-yellow-400 transition duration-300"
-          ><i class="fab fa-x-twitter fa-lg"></i
-        ></a>
-        <a
-          href="#"
-          class="text-white hover:text-yellow-400 transition duration-300"
-          ><i class="fab fa-facebook-f fa-lg"></i
-        ></a>
-        <a
-          href="#"
-          class="text-white hover:text-yellow-400 transition duration-300"
-          ><i class="fab fa-youtube fa-lg"></i
-        ></a>
-        <a
-          href="#"
-          class="text-white hover:text-yellow-400 transition duration-300"
-          ><i class="fab fa-instagram fa-lg"></i
-        ></a>
-      </div>
-    </div>
-
-    <!-- Middle Column: Main Menu -->
-    <div
-      class="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left"
-    >
-      <h2 class="text-2xl font-bold mb-6 text-white">Main Menu</h2>
-      <ul class="list-none space-y-2 text-white">
-        <li
-          class="hover:text-yellow-400 transition duration-300 cursor-pointer"
-        >
-          <a href="./src/pages/about.html">About Us</a>
-        </li>
-        <li
-          class="hover:text-yellow-400 transition duration-300 cursor-pointer"
-        >
-          <a href="./src/pages/Services.html">Services</a>
-        </li>
-        <li
-          class="hover:text-yellow-400 transition duration-300 cursor-pointer"
-        >
-          <a href="./src/pages/ourProjects.html">Our Projects</a>
-        </li>
-        <li
-          class="hover:text-yellow-400 transition duration-300 cursor-pointer"
-        >
-          <a href="./src/pages/farmers.html">Meet Farmers</a>
-        </li>
-        <li
-          class="hover:text-yellow-400 transition duration-300 cursor-pointer"
-        >
-          <a href="./src/pages/news.html">Latest News</a>
-        </li>
-        <li
-          class="hover:text-yellow-400 transition duration-300 cursor-pointer"
-        >
-          <a href="./src/pages/career.html">Careers</a>
-        </li>
-        <li
-          class="hover:text-yellow-400 transition duration-300 cursor-pointer"
-        >
-          <a href="./src/pages/contact.html">Contacts</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Right Column: Contact Info -->
-    <div
-      class="w-full md:w-1/3 flex flex-col items-center md:items-start text-center md:text-left"
-    >
-      <h2 class="text-2xl font-bold mb-6 text-white">Contact Info</h2>
-      <p class="mb-2 text-white">523 Sylvan Ave, 5th Floor Mountain</p>
-      <p class="mb-2 text-white">View, CA 94041 USA</p>
-      <p class="mb-2 text-white">+1 234 719 8948</p>
-      <p class="mb-2 text-white">+1 987 654 3210</p>
-      <p class="mb-2 text-white">support@ag px-4 rarium.com</p>
-    </div>
-  </div>
-  <div class="mx-auto px-4 max-w-7xl w-full">
-    <hr />
-  </div>
-  <!-- Flexbox for aligning copyright and privacy policy on the same line -->
-  <div
-    class="container mx-auto max-w-7xl p-4 flex justify-between items-center gap-4"
-  >
-    <p class="text-sm text-white">© 2024 Organic Farm. All Rights Reserved</p>
-    <a href="./src/pages/Privacypolicy.html">
-      <p class="text-sm text-white">Privacy Policy | Terms and Conditions</p>
-    </a>
-  </div>
-</footer>
-
-
-<script>
   const slider = document.getElementById('sponsor-slider');
   const logos = Array.from(slider.children); // Get all the logo elements and convert to an array
   const totalLogos = logos.length;

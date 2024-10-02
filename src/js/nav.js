@@ -36,12 +36,12 @@ function initializeDropdown() {
 }
 
 function initializeAccordion() {
+  const menuBtn = document.getElementById("menu-btn");
+  const content = document.getElementById("accordion-content-mobilemenu");
+  const icon = document.getElementById("icon");
+
   function toggleAccordion() {
-    const content = document.getElementById("accordion-content-mobilemenu");
-    const icon = document.getElementById("icon");
-
     content.classList.toggle("hidden");
-
     // Change the icon from angle-down to angle-right and vice versa
     if (content.classList.contains("hidden")) {
       icon.classList.remove("fa-angle-down");
@@ -52,10 +52,29 @@ function initializeAccordion() {
     }
   }
 
-  // Add event listener for the menu button
-  document
-    .getElementById("menu-btn")
-    .addEventListener("click", toggleAccordion);
+  menuBtn.addEventListener("click", toggleAccordion);
+}
+
+function initializeAccordionPlatform() {
+  const menuBtnPlatform = document.getElementById("menu-btn-platform");
+  const contentPlatform = document.getElementById(
+    "accordion-content-mobilemenu-platform"
+  );
+  const iconPlatform = document.getElementById("icon_platform");
+
+  function toggleAccordionPlatform() {
+    contentPlatform.classList.toggle("hidden");
+
+    if (contentPlatform.classList.contains("hidden")) {
+      iconPlatform.classList.remove("fa-angle-down");
+      iconPlatform.classList.add("fa-angle-right");
+    } else {
+      iconPlatform.classList.remove("fa-angle-right");
+      iconPlatform.classList.add("fa-angle-down");
+    }
+  }
+
+  menuBtnPlatform.addEventListener("click", toggleAccordionPlatform);
 }
 
 // Function to initialize all components
@@ -63,7 +82,9 @@ function initializeHeader() {
   initializeMobileMenu();
   initializeDropdown();
   initializeAccordion();
+  initializeAccordionPlatform();
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   initializeHeader(); // Initialize JavaScript on initial page load
 });
