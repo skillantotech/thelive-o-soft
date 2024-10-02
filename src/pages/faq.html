@@ -28,7 +28,11 @@
       <div
         class="flex justify-center items-center h-full bg-black bg-opacity-50"
       >
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4">FAQs</h1>
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4"
+        >
+          FAQs
+        </h1>
       </div>
     </section>
     <!-- <div
@@ -80,7 +84,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <div class="">
+          <!-- <div class="">
             <h2 class="text-xl font-bold mb-4">Categories</h2>
             <ul class="space-y-2">
               <li>
@@ -111,6 +115,50 @@
                 <button
                   class="tab-button w-full text-left p-2 text-gray-800"
                   data-tab="tab4"
+                >
+                  Corporate Office
+                </button>
+              </li>
+            </ul>
+          </div> -->
+
+          <div class="">
+            <h2 class="text-xl font-bold mb-4">Categories</h2>
+            <ul
+              class="flex flex-row overflow-x-auto md:flex-col md:overflow-x-visible md:space-x-0 md:space-y-2 space-x-2"
+            >
+              <li class="flex-shrink-0">
+                <button
+                  class="tab-button border text-black w-full text-left p-2 transition-colors duration-300 ease-in-out md:border-0 md:bg-transparent md:text-black hover:bg-green-600 hover:text-white md:hover:text-green-500 md:hover:bg-transparent"
+                  data-tab="tab1"
+                  onclick="setActive(this)"
+                >
+                  General Information
+                </button>
+              </li>
+              <li class="flex-shrink-0">
+                <button
+                  class="tab-button border text-black w-full text-left p-2 transition-colors duration-300 ease-in-out md:border-0 md:bg-transparent md:text-black hover:bg-green-600 hover:text-white md:hover:text-green-500 md:hover:bg-transparent"
+                  data-tab="tab2"
+                  onclick="setActive(this)"
+                >
+                  Products and Services
+                </button>
+              </li>
+              <li class="flex-shrink-0">
+                <button
+                  class="tab-button border text-black w-full text-left p-2 transition-colors duration-300 ease-in-out md:border-0 md:bg-transparent md:text-black hover:bg-green-600 hover:text-white md:hover:text-green-500 md:hover:bg-transparent"
+                  data-tab="tab3"
+                  onclick="setActive(this)"
+                >
+                  Supplier Information
+                </button>
+              </li>
+              <li class="flex-shrink-0">
+                <button
+                  class="tab-button border text-black w-full text-left p-2 transition-colors duration-300 ease-in-out md:border-0 md:bg-transparent md:text-black hover:bg-green-600 hover:text-white md:hover:text-green-500 md:hover:bg-transparent"
+                  data-tab="tab4"
+                  onclick="setActive(this)"
                 >
                   Corporate Office
                 </button>
@@ -1128,5 +1176,21 @@
     <script src="../js/nav.js"></script>
     <script src="../js/faq.js"></script>
     <!-- <script src="../js/utils/footer.js"></script> -->
+    <!-- <script>
+      function setActive(button) {
+        // Get all buttons in the list
+        const buttons = document.querySelectorAll(".tab-button");
+
+        // Remove the active class from all buttons
+        buttons.forEach((btn) => {
+          btn.classList.remove("md:text-green-500");
+          btn.classList.add("md:text-black"); // Set to black by default
+        });
+
+        // Add active class to the clicked button
+        button.classList.add("md:text-green-500");
+        button.classList.remove("md:text-black"); // Remove black text from the active button
+      }
+    </script> -->
   </body>
 </html>

@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
-<body>
-   <header class="text-white">
+  <head></head>
+  <body>
+ <header class="text-white">
         <nav class="hidden lg:flex py-4 px-4 lg:px-6 bg-gray-200 text-black">
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex justify-center flex-grow space-x-5">
@@ -83,18 +82,18 @@
                     <div class="group relative flex items-center text-left h-full py-2">
                         <!-- Dropdown Button -->
                         <div class="text-black font-semibold cursor-pointer hover:text-green-800" id="dropdownBtn">
-                            Platfrom
+                            Platform
 
                             <div id="dropdownContent" class="dropdown-content absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg hidden group-hover:block rounded-md z-50">
                                 <ul class="py-1">
                                     <li>
-                                        <a href="/src/pages/blog.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Liveosoft Software</a>
+                                        <a href="#" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Liveosoft Software</a>
                                     </li>
                                     <li>
                                         <a href="/src/pages/hospitallyService.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Hospitality as a Service (HaaS)</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Bpm&Erp</a>
+                                        <a href="/src/pages/erp.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Bpm & Erp</a>
                                     </li>
                                 </ul>
                             </div>
@@ -103,7 +102,7 @@
                         <!-- Dropdown Menu (hidden by default) -->
                     </div>
 
-                    <a href="./src/pages/lob.html" class="hover:text-green-800">Lob</a>
+                    <a href="/src/pages/lob.html" class="hover:text-green-800">Business</a>
 
                     <!-- <a href="./src/pages/faq.html" class="hover:text-green-800">Faqs</a> -->
                 </div>
@@ -145,12 +144,21 @@
                     Career
                 </a>
                 <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
-              
+                <!-- <a
+           href="./src/pages/Services.html"
+           class="block text-black justify-between items-center p-1 font-semibold"
+         >
+           Services
+         </a>
+          <hr
+            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
+          /> -->
                 <a href="/src/pages/contact.html" class="block text-black justify-between items-center p-1 font-semibold">
                     Contact
                 </a>
                 <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
-                
+               
+
                 <!-- <a id="menu-btn" class="flex text-black justify-between items-center p-1 font-semibold">
             <p>Resource</p>
             <button onclick="toggleAccordion()" class="focus:outline-none">
@@ -186,21 +194,21 @@
 
 
                 <!--     
-            <a id="menu-btn-platfrom" class="flex text-black justify-between items-center p-1 font-semibold">
-            <p>Platfrom </p>
-            <button onclick="toggleAccordionPlatfrom()" class="focus:outline-none">
-              <i id="icon_platfrom" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
+            <a id="menu-btn-platform" class="flex text-black justify-between items-center p-1 font-semibold">
+            <p>Platform </p>
+            <button onclick="toggleAccordionPlatform()" class="focus:outline-none">
+              <i id="icon_platform" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
             </button>
           </a> -->
 
-                <a id="menu-btn-platfrom" class="flex text-black justify-between items-center p-1 font-semibold">
-                    <p>Platfrom</p>
+                <a id="menu-btn-platform" class="flex text-black justify-between items-center p-1 font-semibold">
+                    <p>Platform</p>
                     <button class="focus:outline-none">
-                        <i id="icon_platfrom" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
+                        <i id="icon_platform" class="fa-solid fa-angle-down text-black transform transition-transform"></i>
                     </button>
                 </a>
                 <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
-                <div id="accordion-content-mobilemenu-platfrom" class="hidden p-4 ">
+                <div id="accordion-content-mobilemenu-platform" class="hidden p-4 ">
                     <!-- Accordion content here -->
                     <div class="">
                         <div class="flex justify-between items-center">
@@ -214,16 +222,19 @@
                             <a href="/src/pages/hospitallyService.html" class="block py-2 text-black">- Hospitality as a Service (HaaS)</a>
                         </div>
                     </div>
-                    <div class=""></div>
-                    <div class="flex justify-between items-center">
-                        <a href="#" class="block py-2 text-black">- Bpm&Erp</a>
+                     <div class="">
+                        <div class="flex justify-between items-center">
+                             <a href="/src/pages/erp.html" class="block py-2 text-black">- Bpm&Erp</a>
+                        </div>
                     </div>
+                   
+                   
 
                 </div>
 
 
                 <a href="#" class="block text-black justify-between items-center p-1 font-semibold">
-                    Lob
+                    Business
                 </a>
                 <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
             </div>
@@ -237,10 +248,10 @@
             </div>
         </div>
     </header>
-    <script src="/src/js/nav.js" ></script>
-</body>
+
+
+
+
+    <script src="/src/js/nav.js"></script>
+  </body>
 </html>
-
-
-
-

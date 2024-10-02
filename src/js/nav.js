@@ -3,36 +3,40 @@ function initializeMobileMenu() {
   const mobileMenu = document.getElementById("mobile-menu");
   const closeMenu = document.getElementById("close-menu");
 
-  navbarToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
+  if (navbarToggle && mobileMenu && closeMenu) {
+    navbarToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
 
-  closeMenu.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-  });
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  }
 }
 
 function initializeDropdown() {
   const dropdownBtn = document.getElementById("dropdownBtn");
   const dropdownContent = document.getElementById("dropdownContent");
 
-  dropdownBtn.addEventListener("mouseover", function () {
-    dropdownContent.classList.remove("hidden");
-  });
+  if (dropdownBtn && dropdownContent) {
+    dropdownBtn.addEventListener("mouseover", function () {
+      dropdownContent.classList.remove("hidden");
+    });
 
-  dropdownBtn.addEventListener("mouseleave", function () {
-    if (!dropdownContent.matches(":hover")) {
+    dropdownBtn.addEventListener("mouseleave", function () {
+      if (!dropdownContent.matches(":hover")) {
+        dropdownContent.classList.add("hidden");
+      }
+    });
+
+    dropdownContent.addEventListener("mouseover", function () {
+      dropdownContent.classList.remove("hidden");
+    });
+
+    dropdownContent.addEventListener("mouseleave", function () {
       dropdownContent.classList.add("hidden");
-    }
-  });
-
-  dropdownContent.addEventListener("mouseover", function () {
-    dropdownContent.classList.remove("hidden");
-  });
-
-  dropdownContent.addEventListener("mouseleave", function () {
-    dropdownContent.classList.add("hidden");
-  });
+    });
+  }
 }
 
 function initializeAccordion() {
@@ -40,41 +44,45 @@ function initializeAccordion() {
   const content = document.getElementById("accordion-content-mobilemenu");
   const icon = document.getElementById("icon");
 
-  function toggleAccordion() {
-    content.classList.toggle("hidden");
-    // Change the icon from angle-down to angle-right and vice versa
-    if (content.classList.contains("hidden")) {
-      icon.classList.remove("fa-angle-down");
-      icon.classList.add("fa-angle-right");
-    } else {
-      icon.classList.remove("fa-angle-right");
-      icon.classList.add("fa-angle-down");
-    }
-  }
+  if (menuBtn && content && icon) {
+    function toggleAccordion() {
+      content.classList.toggle("hidden");
 
-  menuBtn.addEventListener("click", toggleAccordion);
+      if (content.classList.contains("hidden")) {
+        icon.classList.remove("fa-angle-down");
+        icon.classList.add("fa-angle-right");
+      } else {
+        icon.classList.remove("fa-angle-right");
+        icon.classList.add("fa-angle-down");
+      }
+    }
+
+    menuBtn.addEventListener("click", toggleAccordion);
+  }
 }
 
-function initializeAccordionPlatfrom() {
-  const menuBtnPlatfrom = document.getElementById("menu-btn-platfrom");
-  const contentPlatfrom = document.getElementById(
-    "accordion-content-mobilemenu-platfrom"
+function initializeAccordionPlatform() {
+  const menuBtnPlatform = document.getElementById("menu-btn-platform");
+  const contentPlatform = document.getElementById(
+    "accordion-content-mobilemenu-platform"
   );
-  const iconPlatfrom = document.getElementById("icon_platfrom");
+  const iconPlatform = document.getElementById("icon_platform");
 
-  function toggleAccordionPlatfrom() {
-    contentPlatfrom.classList.toggle("hidden");
+  if (menuBtnPlatform && contentPlatform && iconPlatform) {
+    function toggleAccordionPlatform() {
+      contentPlatform.classList.toggle("hidden");
 
-    if (contentPlatfrom.classList.contains("hidden")) {
-      iconPlatfrom.classList.remove("fa-angle-down");
-      iconPlatfrom.classList.add("fa-angle-right");
-    } else {
-      iconPlatfrom.classList.remove("fa-angle-right");
-      iconPlatfrom.classList.add("fa-angle-down");
+      if (contentPlatform.classList.contains("hidden")) {
+        iconPlatform.classList.remove("fa-angle-down");
+        iconPlatform.classList.add("fa-angle-right");
+      } else {
+        iconPlatform.classList.remove("fa-angle-right");
+        iconPlatform.classList.add("fa-angle-down");
+      }
     }
-  }
 
-  menuBtnPlatfrom.addEventListener("click", toggleAccordionPlatfrom);
+    menuBtnPlatform.addEventListener("click", toggleAccordionPlatform);
+  }
 }
 
 // Function to initialize all components
@@ -82,7 +90,7 @@ function initializeHeader() {
   initializeMobileMenu();
   initializeDropdown();
   initializeAccordion();
-  initializeAccordionPlatfrom();
+  initializeAccordionPlatform();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
