@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
-<body>
-   <header class="text-white">
-        <nav class="hidden lg:flex py-4 px-4 lg:px-6 bg-gray-200 text-black">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="flex justify-center flex-grow space-x-5">
+  <head></head>
+  <body>
+ <header class="text-white">
+        <nav class="hidden lg:flex p-4 bg-gray-200 text-black">
+            <div class="container max-w-7xl mx-auto flex justify-between items-center">
+                <div class="flex flex-grow space-x-5">
                     <a href="#" class="text-sm hover:text-green-800">
                         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                         558 Main Street, India
@@ -25,7 +24,7 @@
                     <!-- Add your nav links here -->
                 </div>
 
-                <div class="hidden items-center space-x-4 lg:flex flex-grow justify-center">
+                <div class="hidden items-center space-x-4 lg:flex flex-grow justify-end">
                     <p class="text-sm text-black">Follow Us:</p>
                     <a href="#" class="relative hover:text-green-800"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
                     <a href="#" class="relative hover:text-green-800"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
@@ -35,10 +34,10 @@
             </div>
         </nav>
         <!-- Main Navbar -->
-        <nav class="bg-white py-4 px-4 lg:px-6">
-            <div class="container mx-auto flex justify-center items-center">
+        <nav class="bg-white p-4">
+            <div class="container max-w-7xl mx-auto flex justify-center items-center">
                 <!-- <div class="flex justify-center lg:justify-center flex-grow px-4"> -->
-                <div class="flex md:justify-left lg:justify-center flex-grow px-4">
+                <div class="flex md:justify-left  flex-grow ">
                     <a href="./index.html" class="text-black text-2xl font-bold">Liveosoft</a>
                 </div>
                 <!-- <div class="flex-grow">
@@ -88,13 +87,13 @@
                             <div id="dropdownContent" class="dropdown-content absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg hidden group-hover:block rounded-md z-50">
                                 <ul class="py-1">
                                     <li>
-                                        <a href="/src/pages/blog.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Liveosoft Software</a>
+                                        <a href="/src/pages/liveosoftSoftware.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Liveosoft Software</a>
                                     </li>
                                     <li>
                                         <a href="/src/pages/hospitallyService.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Hospitality as a Service (HaaS)</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Bpm & Erp</a>
+                                        <a href="/src/pages/erp.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">Bpm & Erp</a>
                                     </li>
                                 </ul>
                             </div>
@@ -103,13 +102,13 @@
                         <!-- Dropdown Menu (hidden by default) -->
                     </div>
 
-                    <a href="./src/pages/lob.html" class="hover:text-green-800">Business</a>
+                    <a href="/src/pages/lob.html" class="hover:text-green-800">Business</a>
 
                     <!-- <a href="./src/pages/faq.html" class="hover:text-green-800">Faqs</a> -->
                 </div>
 
-                <div class="hidden space-x-4 lg:flex flex-grow justify-center items-center">
-                    <a href="#" class="relative hover:text-green-800 font-extrabold"><i class="fa fa-cart-arrow-down text-2xl" aria-hidden="true"></i></a>
+                <div class="hidden lg:flex flex-grow justify-end items-center">
+                    <!-- <a href="#" class="relative hover:text-green-800 font-extrabold"><i class="fa fa-cart-arrow-down text-2xl" aria-hidden="true"></i></a> -->
                     <a href="#" class="inline-block bg-green-800 text-white font-bold py-2 px-4 rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-opacity-75">
                         Book a Meeting
                     </a>
@@ -145,12 +144,21 @@
                     Career
                 </a>
                 <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
-              
+                <!-- <a
+           href="./src/pages/Services.html"
+           class="block text-black justify-between items-center p-1 font-semibold"
+         >
+           Services
+         </a>
+          <hr
+            class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6"
+          /> -->
                 <a href="/src/pages/contact.html" class="block text-black justify-between items-center p-1 font-semibold">
                     Contact
                 </a>
                 <hr class="border-t-2 border-dotted border-green-600 w-full mx-auto my-6" />
-                
+               
+
                 <!-- <a id="menu-btn" class="flex text-black justify-between items-center p-1 font-semibold">
             <p>Resource</p>
             <button onclick="toggleAccordion()" class="focus:outline-none">
@@ -204,7 +212,7 @@
                     <!-- Accordion content here -->
                     <div class="">
                         <div class="flex justify-between items-center">
-                            <a href="#" class="block py-2 text-black">- Liveosoft Software</a>
+                            <a href="/src/pages/liveosoftSoftware.html" class="block py-2 text-black">- Liveosoft Software</a>
                             </button>
                         </div>
                     </div>
@@ -214,10 +222,13 @@
                             <a href="/src/pages/hospitallyService.html" class="block py-2 text-black">- Hospitality as a Service (HaaS)</a>
                         </div>
                     </div>
-                    <div class=""></div>
-                    <div class="flex justify-between items-center">
-                        <a href="#" class="block py-2 text-black">- Bpm&Erp</a>
+                     <div class="">
+                        <div class="flex justify-between items-center">
+                             <a href="/src/pages/erp.html" class="block py-2 text-black">- Bpm&Erp</a>
+                        </div>
                     </div>
+                   
+                   
 
                 </div>
 
@@ -237,10 +248,7 @@
             </div>
         </div>
     </header>
-    <script src="/src/js/nav.js" ></script>
-</body>
+
+    <script src="/src/js/nav.js"></script>
+  </body>
 </html>
-
-
-
-
