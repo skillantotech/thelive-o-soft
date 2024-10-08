@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "watch": "npx tailwindcss -i ./input.css -o ./output.css --watch",
-    "build": "npx tailwindcss -i ./input.css -o ./output.css"
+    "build": "npx tailwindcss -o build.css --minify"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.10"
