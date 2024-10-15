@@ -31,7 +31,7 @@
     <div id="header"></div>
     <!-- Hero Section -->
     <div
-      class="bg-cover bg-center h-64 sm:h-80 md:h-96 lg:h-[30rem]"
+      class="bg-cover bg-center h-96"
       style="
         background-image: url('https://img.freepik.com/free-photo/adult-nature-coffee-harvesting_23-2151711546.jpg?t=st=1728281633~exp=1728285233~hmac=a64b3fe32230c23190af65b6b98599e76e25ae829cf02010a7397baf03c0a783&w=1380');
       "
@@ -45,7 +45,7 @@
 
     <!-- Company History Section -->
     <section class="bg-white py-16">
-      <div class="max-w-7xl mx-auto px-4 ">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-green-700 text-center mb-8">
           Company History
         </h2>
@@ -179,138 +179,110 @@
 
 <!-- Testimonial Slider Section -->
 <section class="bg-white py-10">
-  <div class="swiper-container mx-auto max-w-7xl px-4 sm:px-6 overflow-hidden ">
+  <div class="swiper-container mx-auto max-w-7xl px-4 sm:px-6 overflow-hidden">
       <div class="swiper-wrapper">
 
-          <!-- Testimonial Card 1-->
-          <div class="swiper-slide py-4 h-fit">
-              <div class="p-12 h-auto rounded-lg shadow-md bg-white border border-gray-200 testimonial-card">
-                  <i class="fa-solid fa-quote-left"></i>
-                  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                      <div class="flex flex-col space-y-2 w-1/2 sm:w-80 sm:mr-4"> <!-- Added sm:mr-4 for spacing -->
-                          <h3 class="text-xl font-semibold text-gray-800">Excellent Service</h3>
-                          <p class="text-gray-600">The team provided outstanding service, and I couldn't be happier with the results. Their attention to detail is remarkable.</p>
+          <!-- Testimonial Card 1 -->
+          <div class="swiper-slide py-4">
+              <div class="p-6 md:p-12 h-full rounded-lg shadow-md bg-white border border-gray-200">
+                  <i class="fa-solid fa-quote-left text-green-500 text-xl mb-4"></i>
+                  <div class="flex flex-col sm:gap-4 sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+                      <div class="flex-1 space-y-2">
+                          <h3 class="text-lg md:text-xl font-semibold text-gray-800">Excellent Service</h3>
+                          <p class="text-gray-600 text-sm md:text-base">The team provided outstanding service, and I couldn't be happier with the results. Their attention to detail is remarkable.</p>
                       </div>
-                      <img src="https://t3.ftcdn.net/jpg/06/20/21/30/360_F_620213039_4spDfteqj6rJRmT1WUQFTNM8lEjZbIon.jpg" alt="User Image" class="h-40 w-1/4 rounded-lg object-cover mt-4 sm:mt-0">
+                      <img src="https://img.freepik.com/free-photo/businessman-black-suit-promoting-something_114579-15897.jpg?t=st=1728400106~exp=1728403706~hmac=39e447705bb10aebd28883cd04b7015fd0293284dbcd912e702ede9bba394afb&w=1060" alt="User Image" class="h-24 w-24 sm:h-32 sm:w-32 rounded-lg object-cover">
                   </div>
-                  <br/>
-                  <hr/>
-                  <div class="flex items-center space-x-3 mt-4">
-                      <div class="rounded-full p-2 bg-green-200 mt-9">
+                  <hr class="my-4">
+                  <div class="flex items-center space-x-3">
+                      <div class="rounded-full p-2 bg-green-200">
                           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h3.75m-3.75 3.75H6.75m5.25 5.25H6.75m11.25-9h.375m1.5 1.5V15m-13.5 1.5H4.5V12H9" />
                           </svg>
                       </div>
                       <div>
-                          <h4 class="font-semibold text-gray-800 text-lg mt-10">John Doe</h4>
+                          <h4 class="font-semibold text-gray-800 text-base sm:text-lg">John Doe</h4>
                           <p class="text-yellow-500 text-sm">USA</p>
                       </div>
                   </div>
               </div>
           </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="swiper-slide py-4">
+              <div class="p-6 md:p-12 h-full rounded-lg shadow-md bg-white border border-gray-200">
+                  <i class="fa-solid fa-quote-left text-green-500 text-xl mb-4"></i>
+                  <div class="flex flex-col sm:gap-4 sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+                      <div class="flex-1 space-y-2">
+                          <h3 class="text-lg md:text-xl font-semibold text-gray-800">Outstanding Support</h3>
+                          <p class="text-gray-600 text-sm md:text-base">Their support team was always available and quick to respond. Really made a difference in our project's success.</p>
+                      </div>
+                      <img src="https://img.freepik.com/free-photo/portrait-outdoors-business-man-smiles_23-2148763856.jpg?t=st=1728400157~exp=1728403757~hmac=b7fa11a34022337e8de9f336a5e7bce644a13f6a0711c1f829632041851896eb&w=1060" alt="User Image" class="h-24 w-24 sm:h-32 sm:w-32 rounded-lg object-cover">
+                  </div>
+                  <hr class="my-4">
+                  <div class="flex items-center space-x-3">
+                      <div class="rounded-full p-2 bg-green-200">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h3.75m-3.75 3.75H6.75m5.25 5.25H6.75m11.25-9h.375m1.5 1.5V15m-13.5 1.5H4.5V12H9" />
+                          </svg>
+                      </div>
+                      <div>
+                          <h4 class="font-semibold text-gray-800 text-base sm:text-lg">Jane Doe</h4>
+                          <p class="text-yellow-500 text-sm">Canada</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="swiper-slide py-4">
+              <div class="p-6 md:p-12 h-full rounded-lg shadow-md bg-white border border-gray-200">
+                  <i class="fa-solid fa-quote-left text-green-500 text-xl mb-4"></i>
+                  <div class="flex flex-col sm:gap-4 sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+                      <div class="flex-1 space-y-2">
+                          <h3 class="text-lg md:text-xl font-semibold text-gray-800">Professional Team</h3>
+                          <p class="text-gray-600 text-sm md:text-base">I was impressed with the professionalism of the team. They went above and beyond to meet our needs.</p>
+                      </div>
+                      <img src="https://img.freepik.com/free-photo/business-woman-posing-street_23-2148213468.jpg?t=st=1728400210~exp=1728403810~hmac=cda660871d0c3b6e016859f6b5d2ba3c4368d874dfc3f05c6c09046d42631ff6&w=1060" alt="User Image" class="h-24 w-24 sm:h-32 sm:w-32 rounded-lg object-cover">
+                  </div>
+                  <hr class="my-4">
+                  <div class="flex items-center space-x-3">
+                      <div class="rounded-full p-2 bg-green-200">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h3.75m-3.75 3.75H6.75m5.25 5.25H6.75m11.25-9h.375m1.5 1.5V15m-13.5 1.5H4.5V12H9" />
+                          </svg>
+                      </div>
+                      <div>
+                          <h4 class="font-semibold text-gray-800 text-base sm:text-lg">Sarah Johnson</h4>
+                          <p class="text-yellow-500 text-sm">UK</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
           
-           <!--Testimonial card 2-->
-           <div class="swiper-slide py-4 h-fit">
-            <div class="p-12 h-auto rounded-lg shadow-md bg-white border border-gray-200 testimonial-card">
-                <i class="fa-solid fa-quote-left"></i>
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                    <div class="flex flex-col space-y-2 w-1/2 sm:w-80 sm:mr-4"> <!-- Added sm:mr-4 for spacing -->
-                        <h3 class="text-xl font-semibold text-gray-800">Excellent Service</h3>
-                        <p class="text-gray-600">The team provided outstanding service, and I couldn't be happier with the results. Their attention to detail is remarkable.</p>
+          
+          <!-- Testimonial Card 5 -->
+          <div class="swiper-slide py-4">
+            <div class="p-6 md:p-12 h-full rounded-lg shadow-md bg-white border border-gray-200">
+                <i class="fa-solid fa-quote-left text-green-500 text-xl mb-4"></i>
+                <div class="flex flex-col sm:gap-4 sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
+                    <div class="flex-1 space-y-2">
+                        <h3 class="text-lg md:text-xl font-semibold text-gray-800">Creative Solutions</h3>
+                        <p class="text-gray-600 text-sm md:text-base">They brought creative solutions to our business problems. Highly recommend their innovative thinking.</p>
                     </div>
-                    <img src="https://t3.ftcdn.net/jpg/06/20/21/30/360_F_620213039_4spDfteqj6rJRmT1WUQFTNM8lEjZbIon.jpg" alt="User Image" class="h-40 w-1/4 rounded-lg object-cover mt-4 sm:mt-0">
+                    <img src="https://img.freepik.com/free-photo/front-view-smiley-business-man_23-2148479583.jpg?t=st=1728400395~exp=1728403995~hmac=2cf2f2f883b14b907436de0f67bbb6218ccef876aabf7f7f367cd7383fbf8883&w=900" alt="User Image" class="h-24 w-24 sm:h-32 sm:w-32 rounded-lg object-cover">
                 </div>
-                <br/>
-                <hr/>
-                <div class="flex items-center space-x-3 mt-4">
-                    <div class="rounded-full p-2 bg-green-200 mt-9">
+                <hr class="my-4">
+                <div class="flex items-center space-x-3">
+                    <div class="rounded-full p-2 bg-green-200">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h3.75m-3.75 3.75H6.75m5.25 5.25H6.75m11.25-9h.375m1.5 1.5V15m-13.5 1.5H4.5V12H9" />
                         </svg>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-gray-800 text-lg mt-10">John Doe</h4>
-                        <p class="text-yellow-500 text-sm">USA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-           <!-- Testimonial Card 3-->
-           <div class="swiper-slide py-4 h-fit">
-            <div class="p-12 h-auto rounded-lg shadow-md bg-white border border-gray-200 testimonial-card">
-                <i class="fa-solid fa-quote-left"></i>
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                    <div class="flex flex-col space-y-2 w-1/2 sm:w-80 sm:mr-4"> <!-- Added sm:mr-4 for spacing -->
-                        <h3 class="text-xl font-semibold text-gray-800">Excellent Service</h3>
-                        <p class="text-gray-600">The team provided outstanding service, and I couldn't be happier with the results. Their attention to detail is remarkable.</p>
-                    </div>
-                    <img src="https://t3.ftcdn.net/jpg/06/20/21/30/360_F_620213039_4spDfteqj6rJRmT1WUQFTNM8lEjZbIon.jpg" alt="User Image" class="h-40 w-1/4 rounded-lg object-cover mt-4 sm:mt-0">
-                </div>
-                <br/>
-                <hr/>
-                <div class="flex items-center space-x-3 mt-4">
-                    <div class="rounded-full p-2 bg-green-200 mt-9">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h3.75m-3.75 3.75H6.75m5.25 5.25H6.75m11.25-9h.375m1.5 1.5V15m-13.5 1.5H4.5V12H9" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-800 text-lg mt-10">John Doe</h4>
-                        <p class="text-yellow-500 text-sm">USA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-           <!-- Testimonial Card 4-->
-           <div class="swiper-slide py-4 h-fit">
-            <div class="p-12 h-auto rounded-lg shadow-md bg-white border border-gray-200 testimonial-card">
-                <i class="fa-solid fa-quote-left"></i>
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                    <div class="flex flex-col space-y-2 w-1/2 sm:w-80 sm:mr-4"> <!-- Added sm:mr-4 for spacing -->
-                        <h3 class="text-xl font-semibold text-gray-800">Excellent Service</h3>
-                        <p class="text-gray-600">The team provided outstanding service, and I couldn't be happier with the results. Their attention to detail is remarkable.</p>
-                    </div>
-                    <img src="https://t3.ftcdn.net/jpg/06/20/21/30/360_F_620213039_4spDfteqj6rJRmT1WUQFTNM8lEjZbIon.jpg" alt="User Image" class="h-40 w-1/4 rounded-lg object-cover mt-4 sm:mt-0">
-                </div>
-                <br/>
-                <hr/>
-                <div class="flex items-center space-x-3 mt-4">
-                    <div class="rounded-full p-2 bg-green-200 mt-9">
-                        <svg xmlns="" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h3.75m-3.75 3.75H6.75m5.25 5.25H6.75m11.25-9h.375m1.5 1.5V15m-13.5 1.5H4.5V12H9" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-800 text-lg mt-10">John Doe</h4>
-                        <p class="text-yellow-500 text-sm">USA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-           <!-- Testimonial Card -->
-           <div class="swiper-slide py-4 h-fit">
-            <div class="p-12 h-auto rounded-lg shadow-md bg-white border border-gray-200 testimonial-card">
-                <i class="fa-solid fa-quote-left"></i>
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                    <div class="flex flex-col space-y-2 w-1/2 sm:w-80 sm:mr-4"> <!-- Added sm:mr-4 for spacing -->
-                        <h3 class="text-xl font-semibold text-gray-800">Excellent Service</h3>
-                        <p class="text-gray-600">The team provided outstanding service, and I couldn't be happier with the results. Their attention to detail is remarkable.</p>
-                    </div>
-                    <img src="https://t3.ftcdn.net/jpg/06/20/21/30/360_F_620213039_4spDfteqj6rJRmT1WUQFTNM8lEjZbIon.jpg" alt="User Image" class="h-40 w-1/4 rounded-lg object-cover mt-4 sm:mt-0">
-                </div>
-                <br/>
-                <hr/>
-                <div class="flex items-center space-x-3 mt-4">
-                    <div class="rounded-full p-2 bg-green-200 mt-9">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h3.75m-3.75 3.75H6.75m5.25 5.25H6.75m11.25-9h.375m1.5 1.5V15m-13.5 1.5H4.5V12H9" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-800 text-lg mt-10">John Doe</h4>
-                        <p class="text-yellow-500 text-sm">USA</p>
+                        <h4 class="font-semibold text-gray-800 text-base sm:text-lg">Michael Lee</h4>
+                        <p class="text-yellow-500 text-sm">Australia</p>
                     </div>
                 </div>
             </div>

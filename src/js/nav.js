@@ -3,12 +3,12 @@ function initializeMobileMenu() {
   const mobileMenu = document.getElementById("mobile-menu");
   const closeMenu = document.getElementById("close-menu");
 
-  navbarToggle.addEventListener("click", () => {
+  navbarToggle.addEventListener("click", (event) => {
     event.preventDefault();
     mobileMenu.classList.toggle("hidden");
   });
 
-  closeMenu.addEventListener("click", () => {
+  closeMenu.addEventListener("click", (event) => {
     event.preventDefault();
     mobileMenu.classList.add("hidden");
   });
@@ -101,6 +101,6 @@ function initializeHeader() {
   initializeAccordionPlatform();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   initializeHeader(); // Initialize JavaScript on initial page load
 });
