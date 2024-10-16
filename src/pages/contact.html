@@ -18,6 +18,12 @@
         background-position: center;
         height: 300px;
       }
+
+      /* Custom CSS for adding a red asterisk */
+      .required::after {
+        content: " *"; /* Adds the asterisk */
+        color: #ef4444; /* Tailwind red-500 */
+      }
     </style>
   </head>
   <body class="bg-gray-100 font-sans">
@@ -36,9 +42,7 @@
         background-image: url('https://images.pexels.com/photos/7054508/pexels-photo-7054508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
       "
     >
-      <div
-        class="flex items-center justify-center h-full bg-black bg-opacity-50 text-center"
-      >
+      <div class="flex justify-center items-center h-full">
         <h1 class="text-white text-4xl font-bold">Contact Us</h1>
       </div>
     </section>
@@ -51,34 +55,42 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-6">
               Send Us a Message
             </h2>
-            <form>
+            <form id="contactForm">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <!-- First Name -->
                 <div>
                   <label
                     for="first-name"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-gray-700 required"
                     >First Name</label
                   >
                   <input
                     type="text"
-                    id="first-name"
+                    id="firstName"
+                    maxlength="100"
+                    placeholder="First Name"
+                    required
+                    pattern="[A-Za-z\s]+"
+                    title="First Name can only contain letters and spaces."
                     class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                    placeholder="John"
                   />
                 </div>
                 <!-- Last Name -->
                 <div>
                   <label
                     for="last-name"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-gray-700 required"
                     >Last Name</label
                   >
                   <input
                     type="text"
-                    id="last-name"
+                    id="lastName"
+                    maxlength="100"
+                    placeholder="Last Name"
+                    required
+                    pattern="[A-Za-z\s]+"
+                    title="Last Name can only contain letters and spaces."
                     class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                    placeholder="Doe"
                   />
                 </div>
               </div>
@@ -86,12 +98,12 @@
               <div class="mt-6">
                 <label
                   for="email"
-                  class="block text-sm font-medium text-gray-700"
+                  class="block text-sm font-medium text-gray-700 required"
                   >Email</label
                 >
                 <input
                   type="email"
-                  id="email"
+                  required
                   class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   placeholder="you@example.com"
                 />
@@ -100,21 +112,25 @@
               <div class="mt-6">
                 <label
                   for="phone"
-                  class="block text-sm font-medium text-gray-700"
+                  class="block text-sm font-medium text-gray-700 required"
                   >Phone Number</label
                 >
                 <input
                   type="tel"
                   id="phone"
+                  placeholder="Phone"
+                  maxlength="10"
+                  pattern="\d{10}"
+                  title="Phone number must be exactly 10 digits."
+                  required
                   class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                  placeholder="+1234567890"
                 />
               </div>
               <!-- Message -->
               <div class="mt-6">
                 <label
                   for="message"
-                  class="block text-sm font-medium text-gray-700"
+                  class="block text-sm font-medium text-gray-700 required"
                   >Message</label
                 >
                 <textarea
@@ -122,6 +138,7 @@
                   rows="4"
                   class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   placeholder="Write your message..."
+                  required
                 ></textarea>
               </div>
               <!-- Submit Button -->
@@ -297,7 +314,34 @@
         </a>
       </div>
     </footer>
+    <script>
+      // Restrict input to valid characters in real-time
+      document
+        .getElementById("firstName")
+        .addEventListener("input", function (e) {
+          this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+        });
 
+      document
+        .getElementById("lastName")
+        .addEventListener("input", function (e) {
+          this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+        });
+
+      document.getElementById("phone").addEventListener("input", function (e) {
+        this.value = this.value.replace(/[^0-9]/g, "");
+      });
+
+      // Form submission validation
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          if (!this.checkValidity()) {
+            e.preventDefault(); // Prevent form submission
+            alert("Please fill out the form correctly."); // Alert user about validation issues
+          }
+        });
+    </script>
     <script src="../js/utils/header.js"></script>
     <script src="../js/nav.js"></script>
   </body>

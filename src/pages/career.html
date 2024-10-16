@@ -10,6 +10,13 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <style>
+      /* Custom CSS for adding a red asterisk */
+      .required::after {
+        content: " *"; /* Adds the asterisk */
+        color: #ef4444; /* Tailwind red-500 */
+      }
+    </style>
   </head>
   <body class="bg-gray-100">
     <div id="header"></div>
@@ -163,34 +170,34 @@
     >
       <!-- Form Header -->
       <div
-        class="bg-green-700 text-white p-8 rounded-t-lg shadow-lg flex-grow min-h-full items-center"
+        class="bg-green-700 text-white p-6 sm:p-8 rounded-t-lg shadow-lg flex-grow min-h-full items-center"
       >
         <h2 class="text-3xl font-extrabold gap-4">JOB APPLICATION</h2>
-        <p class="text-lg gap-4">
-          Harmoni Kreatif Group<br />108 N Platinum Ave Deming, NY 88030
-        </p>
+        <!--<p class="text-xl gap-4">
+          TheLiveosoft
+        </p>-->
         <div class="mt-4 gap-4 flex flex-wrap w-full">
           <div class="flex items-center space-x-2">
             <i class="fa-solid fa-phone"></i>
-            <p class="text-base">210-788-8829</p>
+            <p class="text-base">+91 85969 25810</p>
           </div>
           <div class="flex items-center space-x-2">
             <i class="fa-solid fa-envelope"></i>
-            <p class="text-base">info@harmonikreatif.com</p>
+            <p class="text-base">tusar@theliveosoft.com</p>
           </div>
           <div class="flex items-center space-x-2">
             <i class="fa-solid fa-globe"></i>
-            <p class="text-base">www.harmonikreatif.com</p>
+            <p class="text-base">www.theliveosoft.com</p>
           </div>
         </div>
       </div>
 
       <!-- Form Body -->
-      <form
-        class="bg-white p-8 gap-20 rounded-b-lg shadow-lg flex-grow min-h-full"
+      <!-- <form
+        class="bg-white p-6 sm:p-8 gap-20 rounded-b-lg shadow-lg flex-grow min-h-full"
       >
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- First Name -->
+         
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >First Name</label
@@ -202,7 +209,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Last Name -->
+        
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >Last Name</label
@@ -214,21 +221,21 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Gender -->
+         
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >Gender</label
             >
-            <div class="flex items-center space-x-4">
-              <input type="radio" name="gender" id="female" class="mr-2" />
+            <div class="flex items-center space-x-2 py-3">
+              <input type="radio" name="gender" id="female" class="mr-1" />
               <label for="female" class="text-gray-600">Female</label>
-              <input type="radio" name="gender" id="male" class="mr-2" />
+              <input type="radio" name="gender" id="male" class="mr-1" />
               <label for="male" class="text-gray-600">Male</label>
-              <input type="radio" name="gender" id="others" class="mr-2" />
+              <input type="radio" name="gender" id="others" class="mr-1" />
               <label for="others" class="text-gray-600">Others</label>
             </div>
           </div>
-          <!-- Phone -->
+          
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >Phone</label
@@ -240,7 +247,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Date of Birth -->
+        
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >Date of Birth</label
@@ -251,7 +258,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Email -->
+         
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >Email</label
@@ -263,7 +270,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Address -->
+        
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >Address</label
@@ -275,7 +282,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Street -->
+        
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >Street</label
@@ -287,7 +294,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- City -->
+         
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >City</label
@@ -299,7 +306,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- ZIP Code -->
+        
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >ZIP Code</label
@@ -311,7 +318,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Education -->
+         
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >EDUCATION</label
@@ -323,7 +330,7 @@
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
-          <!-- Experience -->
+         
           <div>
             <label class="block text-gray-700 text-sm font-semibold gap-2"
               >EXPERIENCE</label
@@ -337,17 +344,212 @@
           </div>
         </div>
 
-        <!-- Note -->
-        <div class="gap-4 p-6">
+       
+        
+        <div class="gap-4 py-6 text-center">
           <p class="text-gray-600">
-            <input type="radio" required /> your data entry in the job
-            application form is crucial to ensure accuracy and avoid any
-            potential mistakes.
+        ]
+            ** Your data entry in the job application form is crucial to ensure
+            accuracy and avoid any potential mistakes **
           </p>
         </div>
 
-        <!-- Submit Button -->
+       
+        
         <div class="gap-6 text-center">
+          <button
+            type="submit"
+            class="bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-300"
+          >
+            Submit
+          </button>
+        </div>
+      </form> -->
+      <form
+        class="bg-white p-6 sm:p-8 gap-20 rounded-b-lg shadow-lg flex-grow min-h-full"
+        onsubmit="return validateForm()"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- First Name -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >First Name</label
+            >
+            <input
+              type="text"
+              id="firstName"
+              maxlength="100"
+              placeholder="First Name"
+              required
+              pattern="[A-Za-z\s]+"
+              title="First Name can only contain letters and spaces."
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Last Name -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              id="lastName"
+              maxlength="100"
+              placeholder="Last Name"
+              required
+              pattern="[A-Za-z\s]+"
+              title="Last Name can only contain letters and spaces."
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Gender -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Gender</label
+            >
+            <div class="flex items-center space-x-2 py-3">
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                class="mr-1"
+                required
+              />
+              <label for="female" class="text-gray-600">Female</label>
+              <input type="radio" name="gender" id="male" class="mr-1" />
+              <label for="male" class="text-gray-600">Male</label>
+              <input type="radio" name="gender" id="others" class="mr-1" />
+              <label for="others" class="text-gray-600">Others</label>
+            </div>
+          </div>
+          <!-- Phone -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Phone</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Phone"
+              maxlength="10"
+              pattern="\d{10}"
+              title="Phone number must be exactly 10 digits."
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Date of Birth -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Date of Birth</label
+            >
+            <input
+              type="date"
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Email -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Email</label
+            >
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Address -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Address</label
+            >
+            <input
+              type="text"
+              id="address"
+              placeholder="Address"
+              pattern="[A-Za-z0-9\s,-]+"
+              title="Address can only contain letters, numbers, spaces, commas, and hyphens."
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Street -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Street</label
+            >
+            <input
+              type="text"
+              id="street"
+              placeholder="Street"
+              pattern="[A-Za-z0-9\s,-]+"
+              title="Street can only contain letters, numbers, spaces, commas, and hyphens."
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- City -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >City</label
+            >
+            <input
+              type="text"
+              id="city"
+              placeholder="City"
+              pattern="[A-Za-z\s]+"
+              title="City can only contain letters and spaces."
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- ZIP Code -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >ZIP Code</label
+            >
+            <input
+              type="text"
+              id="zip"
+              placeholder="ZIP Code"
+              maxlength="5"
+              pattern="\d{5}"
+              title="ZIP Code must be exactly 5 digits."
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Education -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Education</label
+            >
+            <input
+              type="text"
+              placeholder="Education"
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+          <!-- Experience -->
+          <div>
+            <label class="block text-gray-700 text-sm font-semibold required"
+              >Experience</label
+            >
+            <input
+              type="text"
+              placeholder="Experience"
+              required
+              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+            />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="gap-6 text-center py-6">
           <button
             type="submit"
             class="bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-300"
@@ -360,6 +562,55 @@
 
     <!-- Footer -->
     <div id="footer"></div>
+
+    <script>
+      // Restrict input to valid characters in real-time
+      document
+        .getElementById("firstName")
+        .addEventListener("input", function (e) {
+          this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+        });
+
+      document
+        .getElementById("lastName")
+        .addEventListener("input", function (e) {
+          this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+        });
+
+      document.getElementById("phone").addEventListener("input", function (e) {
+        this.value = this.value.replace(/[^0-9]/g, "");
+      });
+
+      document
+        .getElementById("address")
+        .addEventListener("input", function (e) {
+          this.value = this.value.replace(/[^A-Za-z0-9\s,-]/g, "");
+        });
+
+      document.getElementById("street").addEventListener("input", function (e) {
+        this.value = this.value.replace(/[^A-Za-z0-9\s,-]/g, "");
+      });
+
+      document.getElementById("city").addEventListener("input", function (e) {
+        this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+      });
+
+      document.getElementById("zip").addEventListener("input", function (e) {
+        this.value = this.value.replace(/[^0-9]/g, "");
+      });
+
+      // Form validation function
+      function validateForm() {
+        const form = document.querySelector("form");
+        const isValid = form.checkValidity();
+
+        if (!isValid) {
+          alert("Please fill out all required fields correctly.");
+        }
+
+        return isValid; // Prevent form submission if invalid
+      }
+    </script>
     <script src="../js/utils/header.js"></script>
     <script src="../js/utils/footer.js"></script>
     <script src="../js/nav.js"></script>
