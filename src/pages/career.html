@@ -83,85 +83,66 @@
       </div>
     </section>
 
-    <!-- Job Vacancy Section -->
     <section id="job-vacancy" class="py-16">
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">
           Job Vacancy
         </h2>
-        <div class="grid gap-8 lg:grid-cols-3 sm:grid-cols-1">
-          <!-- Job Card 1 -->
-          <div
-            class="bg-white flex flex-col justify-between p-6 h-full rounded-lg shadow-md border border-gray-200"
-          >
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                Financial Executive
-              </h3>
-              <p class="text-sm text-gray-600 font-semibold mb-2">
-                Expected salary: <span class="text-gray-800">MYR - 0</span>
-              </p>
-              <p class="text-sm text-gray-700 mb-4">
-                Finance Executive Ready for a new challenge? Join our HR team at
-                Tec-Centric Solutions, located in Kuala Lumpur. Ideal candidates
-                must have a bachelor's degree and strong interpersonal skills.
-              </p>
-            </div>
-            <a
-              href="#job-application"
-              class="block text-center text-blue-600 font-semibold py-2 rounded-lg border border-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
-              >Apply Now</a
-            >
-          </div>
-          <!-- Job Card 2 -->
-          <div
-            class="bg-white flex flex-col justify-between p-6 h-full rounded-lg shadow-md border border-gray-200"
-          >
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                Human Resources Executive
-              </h3>
-              <p class="text-sm text-gray-600 font-semibold mb-2">
-                Expected salary: <span class="text-gray-800">MYR - 0</span>
-              </p>
-              <p class="text-sm text-gray-700 mb-4">
-                Join our HR team at Tec-Centric Solutions. Ideal candidates
-                should have a bachelor's degree, understand HR laws, and be
-                willing to travel to Cyberjaya.
-              </p>
-            </div>
-            <a
-              href="#job-application"
-              class="block text-center text-blue-600 font-semibold py-2 rounded-lg border border-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
-              >Apply Now</a
-            >
-          </div>
-          <!-- Job Card 3 -->
-          <div
-            class="bg-white flex flex-col justify-between p-6 h-full rounded-lg shadow-md border border-gray-200"
-          >
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                Receptionist
-              </h3>
-              <p class="text-sm text-gray-600 font-semibold mb-2">
-                Expected salary: <span class="text-gray-800">MYR - 0</span>
-              </p>
-              <p class="text-sm text-gray-700 mb-4">
-                Looking for a receptionist at Tec-Centric Solutions in Kuala
-                Lumpur. Candidates should be independent, willing to travel, and
-                possess strong communication skills.
-              </p>
-            </div>
-            <a
-              href="#job-application"
-              class="block text-center text-blue-600 font-semibold py-2 rounded-lg border border-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
-              >Apply Now</a
-            >
-          </div>
+
+        <!-- Job List will now be the grid container -->
+        <div id="job-list" class="grid gap-8 lg:grid-cols-3 sm:grid-cols-1">
+          <!-- The job cards will be inserted here by JavaScript -->
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div
+      id="jobModal"
+      class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center hidden"
+    >
+      <div
+        class="bg-white rounded-lg shadow-lg p-6 max-w-xl mx-auto w-full md:max-w-2xl mx-4 h-auto max-h-[80vh] flex flex-col"
+      >
+        <!-- Job Details Heading -->
+        <div class="border-l-4 border-green-600 pl-4 mb-4">
+          <h2 class="text-xl font-semibold text-green-600">Job Details</h2>
+        </div>
+
+        <div class="overflow-y-auto flex-grow max-h-[70vh]">
+          <h2
+            id="modalTitle"
+            class="text-xl font-semibold text-gray-800 mb-2"
+          ></h2>
+          <p id="modalLocation" class="text-sm text-gray-600 mb-1"></p>
+          <p id="modalSalary" class="text-sm text-gray-600 mb-1"></p>
+          <p id="modalType" class="text-sm text-gray-600 mb-1"></p>
+          <p id="modalDescription" class="text-sm text-gray-600 mb-4"></p>
+
+          <h3 class="font-medium text-gray-700">Responsibilities:</h3>
+          <ul
+            id="modalResponsibilities"
+            class="list-disc pl-5 text-gray-600"
+          ></ul>
+
+          <h3 class="font-medium text-gray-700 mt-4">Requirements:</h3>
+          <ul
+            id="modalRequirements"
+            class="list-disc pl-5 text-gray-600 mb-4"
+          ></ul>
+        </div>
+
+        <div class="flex justify-center mt-4">
+          <!-- Flex container to center the button -->
+          <button
+            id="closeModal"
+            class="bg-red-600 text-white w-20 px-2 py-1 text-sm rounded hover:bg-red-700 transition duration-200"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Job Application Form -->
     <div
@@ -192,179 +173,6 @@
         </div>
       </div>
 
-      <!-- Form Body -->
-      <!-- <form
-        class="bg-white p-6 sm:p-8 gap-20 rounded-b-lg shadow-lg flex-grow min-h-full"
-      >
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-         
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >First Name</label
-            >
-            <input
-              type="text"
-              placeholder="First Name"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-        
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >Last Name</label
-            >
-            <input
-              type="text"
-              placeholder="Last Name"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-         
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >Gender</label
-            >
-            <div class="flex items-center space-x-2 py-3">
-              <input type="radio" name="gender" id="female" class="mr-1" />
-              <label for="female" class="text-gray-600">Female</label>
-              <input type="radio" name="gender" id="male" class="mr-1" />
-              <label for="male" class="text-gray-600">Male</label>
-              <input type="radio" name="gender" id="others" class="mr-1" />
-              <label for="others" class="text-gray-600">Others</label>
-            </div>
-          </div>
-          
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >Phone</label
-            >
-            <input
-              type="tel"
-              placeholder="Phone"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-        
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >Date of Birth</label
-            >
-            <input
-              type="date"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-         
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >Email</label
-            >
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-        
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >Address</label
-            >
-            <input
-              type="text"
-              placeholder="Address"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-        
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >Street</label
-            >
-            <input
-              type="text"
-              placeholder="Street"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-         
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >City</label
-            >
-            <input
-              type="text"
-              placeholder="City"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-        
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >ZIP Code</label
-            >
-            <input
-              type="text"
-              placeholder="ZIP Code"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-         
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >EDUCATION</label
-            >
-            <input
-              type="text"
-              placeholder="Education"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-         
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold gap-2"
-              >EXPERIENCE</label
-            >
-            <input
-              type="text"
-              placeholder="Experience"
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
-          </div>
-        </div>
-
-       
-        
-        <div class="gap-4 py-6 text-center">
-          <p class="text-gray-600">
-        ]
-            ** Your data entry in the job application form is crucial to ensure
-            accuracy and avoid any potential mistakes **
-          </p>
-        </div>
-
-       
-        
-        <div class="gap-6 text-center">
-          <button
-            type="submit"
-            class="bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-300"
-          >
-            Submit
-          </button>
-        </div>
-      </form> -->
       <form
         class="bg-white p-6 sm:p-8 gap-20 rounded-b-lg shadow-lg flex-grow min-h-full"
         onsubmit="return validateForm()"
@@ -381,7 +189,7 @@
               maxlength="100"
               placeholder="First Name"
               required
-              pattern="[A-Za-z\s]+"
+              pattern="[A-Za-z\s\-]+"
               title="First Name can only contain letters and spaces."
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
@@ -397,7 +205,7 @@
               maxlength="100"
               placeholder="Last Name"
               required
-              pattern="[A-Za-z\s]+"
+              pattern="[A-Za-z\s\-]+"
               title="Last Name can only contain letters and spaces."
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
@@ -427,17 +235,38 @@
             <label class="block text-gray-700 text-sm font-semibold required"
               >Phone</label
             >
-            <input
-              type="tel"
-              id="phone"
-              placeholder="Phone"
-              maxlength="10"
-              pattern="\d{10}"
-              title="Phone number must be exactly 10 digits."
-              required
-              class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
-            />
+            <div class="flex space-x-2">
+              <!-- Country Code Input -->
+              <div class="flex items-center">
+                <select
+                  id="countryCode"
+                  class="px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+                  required
+                >
+                  <option value="+1">+1 (US)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+91">+91 (India)</option>
+                  <option value="+61">+61 (Australia)</option>
+                  <option value="+81">+81 (Japan)</option>
+                  <!-- Add more country codes as needed -->
+                </select>
+              </div>
+              <!-- Phone Number Input -->
+              <div class="flex-grow">
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Phone"
+                  maxlength="10"
+                  pattern="\d{10}"
+                  title="Phone number must be exactly 10 digits."
+                  required
+                  class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
+                />
+              </div>
+            </div>
           </div>
+
           <!-- Date of Birth -->
           <div>
             <label class="block text-gray-700 text-sm font-semibold required"
@@ -445,6 +274,7 @@
             >
             <input
               type="date"
+              id="dob"
               required
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
@@ -456,8 +286,10 @@
             >
             <input
               type="email"
+              id="email"
               placeholder="Email"
-              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address (e.g., example@domain.com)."
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
             />
           </div>
@@ -500,7 +332,7 @@
               type="text"
               id="city"
               placeholder="City"
-              pattern="[A-Za-z\s]+"
+              pattern="[A-Za-z\s\-]+"
               title="City can only contain letters and spaces."
               required
               class="w-full px-4 py-3 border rounded-sm shadow-sm focus:outline-none focus:border-purple-500 transition-colors duration-300"
@@ -567,50 +399,247 @@
       // Restrict input to valid characters in real-time
       document
         .getElementById("firstName")
-        .addEventListener("input", function (e) {
-          this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+        .addEventListener("input", function () {
+          this.value = this.value.replace(/[^A-Za-z\s\-]/g, "");
         });
 
       document
         .getElementById("lastName")
-        .addEventListener("input", function (e) {
-          this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+        .addEventListener("input", function () {
+          this.value = this.value.replace(/[^A-Za-z\s\-]/g, "");
         });
 
-      document.getElementById("phone").addEventListener("input", function (e) {
+      document.getElementById("phone").addEventListener("input", function () {
         this.value = this.value.replace(/[^0-9]/g, "");
       });
 
-      document
-        .getElementById("address")
-        .addEventListener("input", function (e) {
-          this.value = this.value.replace(/[^A-Za-z0-9\s,-]/g, "");
-        });
+      // Set the max attribute of the Date of Birth field to today's date
+      document.addEventListener("DOMContentLoaded", function () {
+        const dobInput = document.getElementById("dob");
+        const today = new Date().toISOString().split("T")[0];
+        dobInput.setAttribute("max", today);
+      });
 
-      document.getElementById("street").addEventListener("input", function (e) {
+      document.getElementById("address").addEventListener("input", function () {
         this.value = this.value.replace(/[^A-Za-z0-9\s,-]/g, "");
       });
 
-      document.getElementById("city").addEventListener("input", function (e) {
-        this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+      document.getElementById("street").addEventListener("input", function () {
+        this.value = this.value.replace(/[^A-Za-z0-9\s,-]/g, "");
       });
 
-      document.getElementById("zip").addEventListener("input", function (e) {
+      document.getElementById("city").addEventListener("input", function () {
+        this.value = this.value.replace(/[^A-Za-z\s\-]/g, "");
+      });
+
+      document.getElementById("zip").addEventListener("input", function () {
         this.value = this.value.replace(/[^0-9]/g, "");
       });
 
       // Form validation function
       function validateForm() {
         const form = document.querySelector("form");
-        const isValid = form.checkValidity();
 
-        if (!isValid) {
-          alert("Please fill out all required fields correctly.");
+        const emailInput = document.getElementById("email");
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // Validate email with proper domain extension
+        if (!emailPattern.test(emailInput.value)) {
+          e.preventDefault(); // Prevent form submission
+          alert(
+            "Please enter a valid email address (e.g., example@domain.com)."
+          );
+          emailInput.focus(); // Set focus back to the email field
+          return; // Exit the validation process
+        }
+        const phoneInput = document.getElementById("phone");
+        const countryCode = document.getElementById("countryCode").value;
+        // Validate phone number length
+        if (phoneInput.value.length !== 10) {
+          alert("Phone number must be exactly 10 digits.");
+          phoneInput.focus(); // Set focus back to the phone field
+          return false; // Prevent form submission
         }
 
-        return isValid; // Prevent form submission if invalid
+        // Check overall form validity
+        if (!form.checkValidity()) {
+          alert("Please fill out the form correctly.");
+          return false; // Prevent form submission
+        }
+
+        // If validation is successful, you can combine and log the phone number
+        const fullPhoneNumber = `${countryCode}${phoneInput.value}`;
+        console.log("Full Phone Number:", fullPhoneNumber);
+
+        return true; // Allow form submission
       }
     </script>
+    <script>
+      const jobData = [
+        {
+          jobName: "Software Developer (AgriTech Solutions)",
+          location: "Bhubaneswar, India",
+          salary: "3-10 LPA",
+          type: "Full-time",
+          description:
+            "We are seeking a talented Software Developer to join our team and contribute to the development of innovative AgriTech solutions. The ideal candidate will work on the design and implementation of our livestock management and supply chain software, ensuring high performance and responsiveness.",
+          responsibilities: [
+            "Develop and maintain software applications for farm and livestock management.",
+            "Collaborate with cross-functional teams to define, design, and ship new features.",
+            "Optimize application performance and scalability.",
+            "Provide support and troubleshooting for production environments.",
+          ],
+          requirements: [
+            "Bachelor’s degree in Computer Science or related field.",
+            "Experience with JavaScript, React, Node.js, and databases (MySQL/PostgreSQL).",
+            "Familiarity with cloud platforms like AWS or Azure.",
+            "Strong problem-solving skills and attention to detail.",
+          ],
+        },
+        {
+          jobName: "Business Development Manager (B2B Solutions)",
+          location: "Remote/On-site",
+          salary: "2-8 LPA",
+          type: "Full-time",
+          description:
+            "Liveosoft is looking for a dynamic Business Development Manager to expand our B2B solutions for the agricultural and livestock sectors. You will be responsible for driving partnerships, building relationships with key clients, and identifying new business opportunities.",
+          responsibilities: [
+            "Identify potential clients and build long-term relationships.",
+            "Develop strategies to grow business through new partnerships.",
+            "Present Liveosoft's software solutions to clients.",
+            "Track and analyze market trends and competition.",
+          ],
+          requirements: [
+            "Bachelor’s degree in Business, Marketing, or related field.",
+            "5+ years of experience in business development or sales in AgriTech or a similar industry.",
+            "Excellent communication and negotiation skills.",
+            "Proven ability to meet and exceed sales targets.",
+          ],
+        },
+        {
+          jobName: "Hospitality Solutions Specialist",
+          location: "Bhubaneswar, India",
+          salary: "4-13 LPA",
+          type: "Full-time",
+          description:
+            "We are seeking a Hospitality Solutions Specialist to help drive the success of our Hospitality as a Service (HaaS) platform. This role involves working closely with clients to implement and optimize our solutions in the hospitality sector, from hotels to event management.",
+          responsibilities: [
+            "Assist in the deployment of Liveosoft’s HaaS platform for clients.",
+            "Provide training and support to clients on platform features.",
+            "Gather client feedback and work with the development team to improve features.",
+            "Ensure customer satisfaction through regular engagement.",
+          ],
+          requirements: [
+            "Bachelor’s degree in Hospitality Management, IT, or related field.",
+            "Experience with hospitality management software is a plus.",
+            "Strong customer service and communication skills.",
+            "Ability to manage multiple clients and projects simultaneously.",
+          ],
+        },
+      ];
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const jobList = document.getElementById("job-list");
+        const jobModal = document.getElementById("jobModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalLocation = document.getElementById("modalLocation");
+        const modalSalary = document.getElementById("modalSalary");
+        const modalType = document.getElementById("modalType");
+        const modalDescription = document.getElementById("modalDescription");
+        const modalResponsibilities = document.getElementById(
+          "modalResponsibilities"
+        );
+        const modalRequirements = document.getElementById("modalRequirements");
+        const closeModal = document.getElementById("closeModal");
+
+        jobData.forEach((job, index) => {
+          const card = document.createElement("div");
+          card.classList.add(
+            "bg-white",
+            "flex",
+            "flex-col",
+            "justify-between",
+            "p-6",
+            "h-full",
+            "rounded-lg",
+            "shadow-md",
+            "border",
+            "border-gray-200"
+          );
+
+          // Display only the first three responsibilities in the card
+          const displayedResponsibilities = job.responsibilities.slice(0, 3);
+
+          card.innerHTML = `
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">${
+                  job.jobName
+                }</h2>
+                <p class="text-sm text-gray-600 mb-1"><strong>Location:</strong> ${
+                  job.location
+                }</p>
+                <p class="text-sm text-gray-600 mb-1"><strong>Salary:</strong> ${
+                  job.salary
+                }</p>
+                <p class="text-sm text-gray-600 mb-1"><strong>Type:</strong> ${
+                  job.type
+                }</p>
+                <p class="text-sm text-gray-600 mb-4"><strong>Description:</strong> ${
+                  job.description
+                }</p>
+                <h3 class="font-medium text-gray-700">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-600">
+                    ${displayedResponsibilities
+                      .map((responsibility) => `<li>${responsibility}</li>`)
+                      .join("")}
+                </ul>
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200" data-index="${index}">Read More</button>
+            `;
+
+          jobList.appendChild(card);
+        });
+
+        // Event listener for "Read More" buttons
+        document.querySelectorAll("button[data-index]").forEach((button) => {
+          button.addEventListener("click", (e) => {
+            const jobIndex = e.target.getAttribute("data-index");
+            const job = jobData[jobIndex];
+
+            // Populate the modal with job data
+            modalTitle.textContent = job.jobName;
+            modalLocation.innerHTML = `<strong>Location:</strong> ${job.location}`;
+            modalSalary.innerHTML = `<strong>Salary:</strong> ${job.salary}`;
+            modalType.innerHTML = `<strong>Type:</strong> ${job.type}`;
+            modalDescription.innerHTML = `<strong>Description:</strong> ${job.description}`;
+
+            // Show all responsibilities in the modal
+            modalResponsibilities.innerHTML = job.responsibilities
+              .map((responsibility) => `<li>${responsibility}</li>`)
+              .join("");
+
+            // Show all requirements in the modal
+            modalRequirements.innerHTML = job.requirements
+              .map((requirement) => `<li>${requirement}</li>`)
+              .join("");
+
+            // Show the modal
+            jobModal.classList.remove("hidden");
+          });
+        });
+
+        // Event listener to close the modal
+        closeModal.addEventListener("click", () => {
+          jobModal.classList.add("hidden");
+        });
+
+        // Close modal when clicking outside the modal content
+        jobModal.addEventListener("click", (e) => {
+          if (e.target === jobModal) {
+            jobModal.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+
     <script src="../js/utils/header.js"></script>
     <script src="../js/utils/footer.js"></script>
     <script src="../js/nav.js"></script>
