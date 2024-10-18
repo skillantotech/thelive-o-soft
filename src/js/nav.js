@@ -4,21 +4,6 @@ function initializeMobileMenu() {
   const closeMenu = document.getElementById("close-menu");
 
   navbarToggle.addEventListener("click", (event) => {
-    event.preventDefault();
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  closeMenu.addEventListener("click", (event) => {
-    event.preventDefault();
-    mobileMenu.classList.add("hidden");
-  });
-}
-function initializeMobileMenu() {
-  const navbarToggle = document.getElementById("navbar-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const closeMenu = document.getElementById("close-menu");
-
-  navbarToggle.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent default behavior
     mobileMenu.classList.toggle("hidden");
   });
