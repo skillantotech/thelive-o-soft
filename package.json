@@ -6,6 +6,6 @@
     "build": "npx tailwindcss -o build.css --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.10"
+    "tailwindcss": "^3.4.14"
   }
 }
