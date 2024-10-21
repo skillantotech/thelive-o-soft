@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <header class="text-white">
+    <!-- <header class="text-white fixed inset-0 w-full z-[9999]"> -->
+         <header class="text-white fixed top-0 left-0 right-0 w-full z-[9999]">
         <nav class="hidden lg:flex p-4 bg-gray-200 text-black">
             <div class="container max-w-7xl mx-auto flex justify-between items-center">
                 <div class="flex flex-grow space-x-5">
@@ -79,7 +80,7 @@
                                         <a href="/src/pages/blog.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">News</a>
                                     </li>
                                     <li>
-                                        <a href="/src/pages/faq.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">FAQS</a>
+                                        <a href="/src/pages/faq.html" class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800">FAQs</a>
                                     </li>
                                 </ul>
                             </div>
@@ -197,7 +198,7 @@
                     </div>
                     <div class=""></div>
                     <div class="flex justify-between items-center">
-                        <a href="/src/pages/faq.html" class="block py-2 text-black">- FAQS</a>
+                        <a href="/src/pages/faq.html" class="block py-2 text-black">- FAQs</a>
                     </div>
                 </div>
 
@@ -259,9 +260,9 @@
     </header>
 
     <!-- Home Page -->
-    <section class="relative h-96 sm:h-80 md:h-96 lg:h-[60vh] bg-black">
+    <section class="relative h-96 sm:mt-24 sm:h-80 md:h-96 lg:h-[60vh] bg-black">
         <!-- Slider Container -->
-        <div class="slider relative h-full w-full overflow-hidden">
+        <div class="slider relative h-full w-full overflow-hidden mt-10">
             <!-- Slider images will be injected by JS -->
         </div>
 
@@ -281,7 +282,7 @@
 
     <!-- Digitally Transform Section -->
     <!-- Main Section -->
-    <section class="max-w-7xl px-4 mx-auto py-12 text-center">
+    <section class="max-w-7xl px-4 mx-auto py-12 text-center ">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Digitally Transform Your Agriculture Businesses With <br />
             Our One-Stop Farm Solution Platform
@@ -367,9 +368,9 @@
 
 
     <!-- Sponsorship Slider Section -->
-    <div class="bg-green-600  py-16  md:px-20">
-        <div class="max-w-7xl mx-auto py-16 px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-white">Trusted by Liveosoft <br /> Companies across the globe</h2>
+    <div class="text-green-600 py-5 sm:py-16 md:px-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 ">Trusted by Liveosoft <br /> Companies across the globe</h2>
 
             <!-- Slider Container -->
             <div class="overflow-hidden relative">
@@ -778,85 +779,83 @@
         <h2 class="text-4xl font-bold text-green-600 text-center mb-8">
             Reach out to Us
         </h2>
-     <form class="w-full px-4" id="contactForm">
-  <!-- First Name, Phone Number, Email -->
-  <div class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-    <div>
-        <input
-            class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            type="text"
-            id="name"
-            maxlength="100"
-            placeholder=" Name"
-            required
-            pattern="[A-Za-z\s\-]+"
-            title=" Name can only contain letters and spaces."
-        />
+        <form class="w-full px-4" id="contactForm">
+            <!-- First Name, Phone Number, Email -->
+            <div class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <input
+                        class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                        type="text"
+                        id="name"
+                        maxlength="100"
+                        placeholder="Name"
+                        required
+                        pattern="[A-Za-z\s\-]+"
+                        title="Name can only contain letters and spaces."
+                    />
+                </div>
+                <!-- Phone number and country code -->
+                <div class="flex flex-col md:flex-row md:space-x-2">
+                    <div class="mb-2 md:mb-0">
+                        <select
+                            class="p-4 w-full bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                            id="countryCode"
+                            required
+                        >
+                            <option value="+91">+91 (India)</option>
+                            <option value="+1">+1 (USA)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <!-- Add other country codes as needed -->
+                        </select>
+                    </div>
+                    <div>
+                        <input
+                            class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                            type="tel"
+                            id="phone"
+                            placeholder="Phone"
+                            maxlength="10"
+                            pattern="\d{10}"
+                            title="Phone number must be exactly 10 digits."
+                            required
+                        />
+                    </div>
+                </div>
+                <div>
+                    <input
+                        class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                        type="email"
+                        id="email"
+                        required
+                        placeholder="you@example.com"
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                        title="Please enter a valid email address (e.g., example@domain.com)."
+                    />
+                </div>
+            </div>
+            <!-- Message -->
+            <div class="mb-6">
+                <textarea
+                    class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                    rows="4"
+                    id="address"
+                    required
+                    placeholder="Your Message"
+                ></textarea>
+            </div>
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button
+                    type="submit"
+                    class="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105"
+                >
+                    Submit
+                </button>
+            </div>
+        </form>
     </div>
-    <!-- Phone number and country code -->
-    <div class="flex">
-        <div class="mr-2">
-            <select
-                class="p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-                id="countryCode"
-                required
-            >
-            <option value="+91">+91 (India)</option>
-            <option value="+1">+1 (USA)</option>
-                <option value="+44">+44 (UK)</option>
-                <!-- Add other country codes as needed -->
-            </select>
-        </div>
-        <div>
-            <input
-                class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-                type="tel"
-                id="phone"
-                placeholder="Phone"
-                maxlength="10"
-                pattern="\d{10}"
-                title="Phone number must be exactly 10 digits."
-                required
-            />
-        </div>
-    </div>
-    <div>
-       <input
-        class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-        type="email"
-        id="email"
-        required
-        placeholder="you@example.com"
-        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-        title="Please enter a valid email address (e.g., example@domain.com)."
-    />
-  </div>
-  </div>
-  <!-- Message -->
-  <div class="mb-6">
-    <textarea
-        class="w-full p-4 bg-green-50 text-gray-700 shadow-md rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-        rows="2"
-        id="address"
-        required
-        placeholder="Your Message"
-    ></textarea>
-  </div>
-  
-  <!-- Submit Button -->
-  <div class="text-center">
-    <button
-        type="submit"
-        class="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105"
-    >
-        Submit
-    </button>
-  </div>
-  
-  </form>
-  
-    </div>
-  </div>
+</div>
+
 
     <footer class="bg-gradient-to-r from-green-700 to-green-950 text-white">
         <!-- Optional Call-to-Action Section (commented out) -->
@@ -898,7 +897,7 @@
                         <a href="/src/pages/blog.html">Blogs</a>
                     </li>
                     <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
-                        <a href="/src/pages/faq.html">FAQS</a>
+                        <a href="/src/pages/faq.html">FAQs</a>
                     </li>
                     <li class="hover:text-yellow-400 transition duration-300 cursor-pointer">
                         <a href="/src/pages/liveosoftSoftware.html">Liveosoft Software</a>

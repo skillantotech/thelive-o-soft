@@ -2,7 +2,8 @@
 <html lang="en">
   <head></head>
   <body>
-    <header class="text-white">
+    <!-- <header class="text-white fixed inset-0 w-full z-[9999]"> -->
+    <header class="text-white fixed top-0 left-0 right-0 w-full z-[9999]">
       <nav class="hidden lg:flex p-4 bg-gray-200 text-black">
         <div
           class="container max-w-7xl mx-auto flex justify-between items-center"
@@ -126,7 +127,7 @@
                       <a
                         href="/src/pages/faq.html"
                         class="block px-4 py-2 text-black hover:text-green-800 hover:bg-gray-100 hover:border-b-2 hover:border-green-800"
-                        >FAQS</a
+                        >FAQs</a
                       >
                     </li>
                   </ul>
@@ -200,7 +201,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="fixed top-0 left-0 w-full h-full mobile-menu hidden lg:hidden bg-white bg-opacity-100 z-[9999] overflow-auto"
+        class="fixed top-0 left-0 w-full h-full mobile-menu hidden lg:hidden bg-white bg-opacity-100 z-[9999] overflow-auto shadow-md"
       >
         <div
           class="flex justify-between items-center p-4 font-bold text-white bg-green-500"
@@ -226,7 +227,7 @@
         </div>
 
         <!-- nav anchor -->
-        <div class="p-6 space-y-4">
+        <div class="p-6 space-y-4 bg-white">
           <a
             href="/index.html"
             class="block text-black justify-between items-center p-1 font-semibold"
@@ -315,7 +316,7 @@
             <div class=""></div>
             <div class="flex justify-between items-center">
               <a href="/src/pages/faq.html" class="block py-2 text-black"
-                >- FAQS</a
+                >- FAQs</a
               >
             </div>
           </div>
