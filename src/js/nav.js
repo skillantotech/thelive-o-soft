@@ -1,21 +1,26 @@
 function initializeMobileMenu() {
-  const navbarToggle = document.getElementById("navbar-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const closeMenu = document.getElementById("close-menu");
+  const navbarToggle = document.querySelector("#navbar-toggle");
+  const mobileMenu = document.querySelector("#mobile-menu");
+  const closeMenu = document.querySelector("#close-menu");
 
-  navbarToggle.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default behavior
-    mobileMenu.classList.toggle("hidden");
-  });
+  if (navbarToggle && mobileMenu) {
+    navbarToggle.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default behavior
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
 
-  closeMenu.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default behavior
-    mobileMenu.classList.add("hidden");
-  });
+  if (closeMenu && mobileMenu) {
+    closeMenu.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default behavior
+      mobileMenu.classList.add("hidden");
+    });
+  }
 }
+
 function initializeDropdown() {
-  const dropdownBtn = document.getElementById("dropdownBtn");
-  const dropdownContent = document.getElementById("dropdownContent");
+  const dropdownBtn = document.querySelector("#dropdownBtn");
+  const dropdownContent = document.querySelector("#dropdownContent");
 
   dropdownBtn.addEventListener("mouseover", function () {
     dropdownContent.classList.remove("hidden");
@@ -37,9 +42,9 @@ function initializeDropdown() {
 }
 
 function initializeAccordion() {
-  const menuBtn = document.getElementById("menu-btn");
-  const content = document.getElementById("accordion-content-mobilemenu");
-  const icon = document.getElementById("icon");
+  const menuBtn = document.querySelector("#menu-btn");
+  const content = document.querySelector("#accordion-content-mobilemenu");
+  const icon = document.querySelector("#icon");
 
   function toggleAccordion() {
     content.classList.toggle("hidden");
@@ -57,11 +62,11 @@ function initializeAccordion() {
 }
 
 function initializeAccordionPlatform() {
-  const menuBtnPlatform = document.getElementById("menu-btn-platform");
-  const contentPlatform = document.getElementById(
-    "accordion-content-mobilemenu-platform"
+  const menuBtnPlatform = document.querySelector("#menu-btn-platform");
+  const contentPlatform = document.querySelector(
+    "#accordion-content-mobilemenu-platform"
   );
-  const iconPlatform = document.getElementById("icon_platform");
+  const iconPlatform = document.querySelector("#icon_platform");
 
   function toggleAccordionPlatform() {
     contentPlatform.classList.toggle("hidden");
@@ -80,6 +85,7 @@ function initializeAccordionPlatform() {
 
 // Function to initialize all components
 function initializeHeader() {
+  console.log("initializeHeader is called");
   initializeMobileMenu();
   initializeDropdown();
   initializeAccordion();
@@ -87,5 +93,5 @@ function initializeHeader() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initializeHeader(); // Initialize JavaScript on initial page load
+  initializeHeader();
 });

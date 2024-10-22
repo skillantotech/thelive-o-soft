@@ -37,13 +37,20 @@
      -->
 
     <section
-      class="bg-cover bg-center h-64 sm:h-80 md:h-96 lg:h-[30rem]"
+      class="relative h-96 sm:mt-24 sm:h-80 md:h-96 lg:h-[60vh] bg-black bg-cover bg-center"
       style="
         background-image: url('https://images.pexels.com/photos/7054508/pexels-photo-7054508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
       "
     >
-      <div class="flex justify-center items-center h-full">
-        <h1 class="text-white text-4xl font-bold">Contact Us</h1>
+      <div
+        class="flex flex-col justify-center items-center h-full px-4 text-center"
+      >
+        <!-- Heading -->
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-4"
+        >
+          Contact Us
+        </h1>
       </div>
     </section>
 
@@ -109,7 +116,7 @@
                   required
                   class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   placeholder="you@example.com"
-                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                   title="Please enter a valid email address (e.g., example@domain.com)."
                 />
               </div>
@@ -186,7 +193,7 @@
             <div class="bg-white p-8 rounded-lg shadow-lg">
               <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Address</h2>
               <p class="text-gray-700">
-                Liveosoft Pvt. Ltd.<br />
+                Liveosoft Technologies Pvt. Ltd.<br />
                 Plot No-01, Adarsh Vihar, KIIT Square,<br />
                 Patia, Bhubaneswar, Odisha,<br />
                 India - 751024<br />
@@ -238,7 +245,7 @@
             class="w-60 h-30 mb-2"
           />
           <p class="text-sm font-bold text-yellow-400 mb-2">ESTD 2024</p>
-          <h2 class="text-2xl font-bold mb-4 text-white">THELIVEOSOFT</h2>
+          <h2 class="text-2xl font-bold mb-4 text-white">Liveosoft Technologies Pvt. Ltd.</h2>
           <p class="text-white mb-6">
             Empowering agriculture and hospitality through innovative technology
             solutions.
@@ -286,7 +293,7 @@
             <li
               class="hover:text-yellow-400 transition duration-300 cursor-pointer"
             >
-              <a href="/src/pages/faq.html">Faqs</a>
+              <a href="/src/pages/faq.html">FAQs</a>
             </li>
             <li
               class="hover:text-yellow-400 transition duration-300 cursor-pointer"
@@ -332,7 +339,7 @@
         class="container mx-auto max-w-7xl p-4 flex justify-between items-center gap-4"
       >
         <p class="text-sm text-white">
-          © 2024 TheLiveosoft. All Rights Reserved
+          © 2024 Liveosoft Technologies Pvt. Ltd. All Rights Reserved
         </p>
         <a href="/src/pages/Privacypolicy.html">
           <p class="text-sm text-white">
@@ -355,6 +362,17 @@
           this.value = this.value.replace(/[^A-Za-z\s\-]/g, ""); // Only letters and spaces
         });
 
+      document.getElementById("email").addEventListener("input", function () {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(this.value)) {
+          this.setCustomValidity(
+            "Please enter a valid email address (e.g., example@domain.com)."
+          );
+        } else {
+          this.setCustomValidity(""); // Clear the validation error message
+        }
+      });
+
       document.getElementById("phone").addEventListener("input", function () {
         this.value = this.value.replace(/[^0-9]/g, ""); // Only digits allowed
       });
@@ -369,32 +387,39 @@
 
           // Validate email with proper domain extension
           if (!emailPattern.test(emailInput.value)) {
-            e.preventDefault(); // Prevent form submission
-            alert(
+            e.preventDefault(); // Prevent form submission if email is invalid
+            emailInput.setCustomValidity(
               "Please enter a valid email address (e.g., example@domain.com)."
             );
-            emailInput.focus(); // Set focus back to the email field
-            return; // Exit the validation process
-          }
+            emailInput.reportValidity(); // Show validation message for email
+            emailInput.focus(); // Focus back to the email input field
+          } else {
+            emailInput.setCustomValidity(""); // Clear the validation error message
 
-          // Validate phone number
-          const phoneInput = document.getElementById("phone");
-          const countryCode = document.getElementById("countryCode").value;
-          if (phoneInput.value.length !== 10) {
-            e.preventDefault(); // Prevent form submission
-            alert("Phone number must be exactly 10 digits.");
-            phoneInput.focus(); // Set focus back to the phone field
-            return; // Exit the validation process
-          }
+            // Only validate phone number if email is valid
+            const phoneInput = document.getElementById("phone");
+            const countryCode = document.getElementById("countryCode").value;
 
-          // Combine country code and phone number
-          const fullPhoneNumber = `${countryCode}${phoneInput.value}`;
-          console.log("Full Phone Number:", fullPhoneNumber); // You can submit this as the final phone number
+            if (phoneInput.value.length !== 10) {
+              e.preventDefault(); // Prevent form submission if phone is invalid
+              phoneInput.setCustomValidity(
+                "Phone number must be exactly 10 digits."
+              );
+              phoneInput.reportValidity(); // Show validation message for phone
+              phoneInput.focus(); // Focus back to the phone input field
+            } else {
+              phoneInput.setCustomValidity(""); // Clear the validation error message
 
-          // Check overall form validity
-          if (!this.checkValidity()) {
-            e.preventDefault(); // Prevent form submission
-            alert("Please fill out the form correctly.");
+              // Combine country code and phone number
+              const fullPhoneNumber = `${countryCode}${phoneInput.value}`;
+              console.log("Full Phone Number:", fullPhoneNumber); // Final phone number output
+
+              // Check overall form validity
+              if (!this.checkValidity()) {
+                e.preventDefault(); // Prevent form submission
+                alert("Please fill out the form correctly.");
+              }
+            }
           }
         });
     </script>
